@@ -153,7 +153,7 @@ const ContactPage: React.FC = () => {
               </h2> 
               <div className="h-64 bg-gray-200 rounded-md overflow-hidden">
                 {/* Replace with actual Google Maps embed */}
-                {/* <div className="w-full h-full flex items-center justify-center bg-gray-300">
+            {/* <div className="w-full h-full flex items-center justify-center bg-gray-300">
                   <p className="text-gray-600">Google Maps Embed</p>
                 </div>
               </div>
@@ -170,8 +170,8 @@ const ContactPage: React.FC = () => {
           </h2>
           <p className="mb-6 max-w-2xl mx-auto">
             Our emergency response team is available 24/7 for critical IT
-            issues. Don't wait if you're experiencing a data loss emergency or
-            security breach.
+            issues. Don&apos;t wait if you&apos;re experiencing a data loss
+            emergency or security breach.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+233XXXXXXXXX">

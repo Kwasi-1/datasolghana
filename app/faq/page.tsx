@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import FAQHero from "@/components/faq/FAQHero";
-import { FAQItem, faqData } from "@/components/faq/faqData";
+import { faqData } from "@/components/faq/faqData";
 
 const FAQPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>("all");
