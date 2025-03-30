@@ -29,25 +29,25 @@ const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-kworld-dark hover:text-kworld-primary font-medium"
+              className="text-kworld-dark hover:text-kworld-primary/60 transition duration-300 font-medium"
             >
               Home
             </Link>
             <Link
               href="/services"
-              className="text-kworld-dark hover:text-kworld-primary font-medium"
+              className="text-kworld-dark hover:text-kworld-primary/60 transition duration-300 font-medium"
             >
               Services
             </Link>
             <Link
               href="/case-studies"
-              className="text-kworld-dark hover:text-kworld-primary font-medium"
+              className="text-kworld-dark hover:text-kworld-primary/60 transition duration-300 font-medium"
             >
               Case Studies
             </Link>
             <Link
               href="/faq"
-              className="text-kworld-dark hover:text-kworld-primary font-medium"
+              className="text-kworld-dark hover:text-kworld-primary/60 transition duration-300 font-medium"
             >
               FAQ
             </Link>

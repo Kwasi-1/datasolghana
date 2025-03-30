@@ -25,7 +25,7 @@ const HomePage: React.FC = () => {
     <div className="overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[700px] flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-kworld-primary/90 to-kworld-secondary/90 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 z-10"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
         <div className="section-padding relative z-20 text-white">
           <div className="max-w-3xl mx-auto text-center">
@@ -66,7 +66,7 @@ const HomePage: React.FC = () => {
 
       {/* Trust Section */}
       <section className="relative py-16">
-        <div className="absolute inset-0 bg-gray-50 opacity-95 z-10"></div>
+        <div className="absolute inset-0 bg-gray-50 opacity-90 z-10"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-fixed"></div>
         <div className="section-padding relative z-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">

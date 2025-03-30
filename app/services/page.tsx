@@ -304,7 +304,7 @@ const ServicesPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="relative py-20">
-        <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
+        <div className="absolute inset-0 bg-kworld-primary opacity-60 z-10"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
         <div className="section-padding relative z-20">
           <div className="text-center text-white">
