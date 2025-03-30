@@ -24,9 +24,10 @@ const HomePage: React.FC = () => {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[600px] flex items-center bg-gradient-to-r from-kworld-primary to-kworld-secondary py-20">
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="section-padding relative z-10 text-white">
+      <section className="relative min-h-[700px] flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-kworld-primary/90 to-kworld-secondary/90 z-10"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+        <div className="section-padding relative z-20 text-white">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
               Recover Your Data & Secure Your Business
@@ -42,7 +43,7 @@ const HomePage: React.FC = () => {
               style={{ animationDelay: "0.4s" }}
             >
               <Link href="/contact">
-                <Button className="btn-secondary w-full sm:w-auto">
+                <Button className="bg-kworld-accent hover:bg-kworld-accent/90 text-white shadow-lg hover:scale-105 transition-transform w-full sm:w-auto">
                   Get a Free Quote
                 </Button>
               </Link>
@@ -53,7 +54,7 @@ const HomePage: React.FC = () => {
               >
                 <Button
                   variant="outline"
-                  className="bg-transparent border-white text-white hover:bg-white hover:text-kworld-primary w-full sm:w-auto"
+                  className="bg-transparent border-white text-white hover:bg-white hover:text-kworld-primary w-full sm:w-auto shadow-lg"
                 >
                   <MessageCircle className="mr-2 h-4 w-4" /> Chat with an Expert
                 </Button>
@@ -64,20 +65,26 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Trust Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="section-padding">
+      <section className="relative py-16">
+        <div className="absolute inset-0 bg-gray-50 opacity-95 z-10"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-fixed"></div>
+        <div className="section-padding relative z-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="p-6 bg-white rounded-lg shadow-sm">
+            <div className="p-8 bg-white rounded-lg shadow-md backdrop-blur-sm bg-white/90 hover:shadow-lg transition-shadow">
               <Counter end={500} suffix="+" />
-              <p className="mt-2 text-gray-600">Successful Data Recoveries</p>
+              <p className="mt-4 text-gray-600 font-medium">
+                Successful Data Recoveries
+              </p>
             </div>
-            <div className="p-6 bg-white rounded-lg shadow-sm">
+            <div className="p-8 bg-white rounded-lg shadow-md backdrop-blur-sm bg-white/90 hover:shadow-lg transition-shadow">
               <Counter end={100} suffix="+" />
-              <p className="mt-2 text-gray-600">Trusted Businesses in Ghana</p>
+              <p className="mt-4 text-gray-600 font-medium">
+                Trusted Businesses in Ghana
+              </p>
             </div>
-            <div className="p-6 bg-white rounded-lg shadow-sm">
+            <div className="p-8 bg-white rounded-lg shadow-md backdrop-blur-sm bg-white/90 hover:shadow-lg transition-shadow">
               <Counter end={10} suffix="+" />
-              <p className="mt-2 text-gray-600">
+              <p className="mt-4 text-gray-600 font-medium">
                 Years of IT Security Experience
               </p>
             </div>
@@ -88,9 +95,14 @@ const HomePage: React.FC = () => {
       {/* Services Overview */}
       <section className="section-padding">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
+          <span className="inline-block px-4 py-2 bg-kworld-primary/10 text-kworld-primary rounded-full font-medium text-sm mb-4">
+            OUR SERVICES
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-kworld-primary">
+            Comprehensive IT Solutions
+          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We provide comprehensive IT solutions to protect your data, secure
+            We provide professional IT solutions to protect your data, secure
             your business, and support your IT infrastructure.
           </p>
         </div>
@@ -129,13 +141,15 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-gray-50 py-16">
-        <div className="section-padding">
-          <div className="text-center mb-12">
+      <section className="relative py-16">
+        <div className="absolute inset-0 bg-kworld-primary opacity-97 z-10"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-fixed"></div>
+        <div className="section-padding relative z-20">
+          <div className="text-center mb-12 text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               What Our Clients Say
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="max-w-2xl mx-auto">
               Don't just take our word for it. See what our clients have to say
               about our services.
             </p>
@@ -165,46 +179,50 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="section-padding bg-white">
-        <div className="bg-kworld-primary rounded-lg p-8 md:p-12 text-white">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Need Help? Let's Talk!
-              </h2>
-              <p className="mb-6">
-                Contact us today for a free consultation. Our experts are ready
-                to help you with your IT needs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="https://wa.me/233XXXXXXXXX"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center"
-                >
-                  <Button
-                    variant="secondary"
-                    className="bg-green-500 hover:bg-green-600 w-full sm:w-auto"
+      <section className="section-padding">
+        <div className="relative rounded-lg overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-kworld-primary/90 to-kworld-secondary/90 z-10"></div>
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+          <div className="p-8 md:p-12 relative z-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="text-white">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Need Help? Let's Talk!
+                </h2>
+                <p className="mb-6">
+                  Contact us today for a free consultation. Our experts are
+                  ready to help you with your IT needs.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="https://wa.me/233XXXXXXXXX"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center"
                   >
-                    <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp
-                  </Button>
-                </a>
-                <a
-                  href="tel:+233XXXXXXXXX"
-                  className="inline-flex items-center justify-center"
-                >
-                  <Button
-                    variant="outline"
-                    className="bg-transparent border-white text-white hover:bg-white hover:text-kworld-primary w-full sm:w-auto"
+                    <Button
+                      variant="secondary"
+                      className="bg-green-500 hover:bg-green-600 w-full sm:w-auto shadow-lg hover:scale-105 transition-transform"
+                    >
+                      <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp
+                    </Button>
+                  </a>
+                  <a
+                    href="tel:+233XXXXXXXXX"
+                    className="inline-flex items-center justify-center"
                   >
-                    <Phone className="mr-2 h-4 w-4" /> Call Us
-                  </Button>
-                </a>
+                    <Button
+                      variant="outline"
+                      className="bg-transparent border-white text-white hover:bg-white hover:text-kworld-primary w-full sm:w-auto shadow-lg"
+                    >
+                      <Phone className="mr-2 h-4 w-4" /> Call Us
+                    </Button>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg">
-              <ContactForm />
+              <div className="bg-white p-6 rounded-lg shadow-lg backdrop-blur-sm">
+                <ContactForm />
+              </div>
             </div>
           </div>
         </div>

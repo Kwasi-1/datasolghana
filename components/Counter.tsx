@@ -41,11 +41,14 @@ const Counter: React.FC<CounterProps> = ({
   }, [end, duration]);
 
   return (
-    <span className="font-bold text-3xl md:text-4xl text-kworld-primary">
-      {prefix}
-      {count}
-      {suffix}
-    </span>
+    <div className="flex flex-col items-center">
+      <span className="font-bold text-4xl md:text-5xl text-kworld-primary bg-gradient-to-r from-kworld-primary to-kworld-accent bg-clip-text text-transparent">
+        {prefix}
+        {count}
+        {suffix}
+      </span>
+      <div className="h-1 w-12 bg-gradient-to-r from-kworld-primary to-kworld-accent rounded-full mt-2"></div>
+    </div>
   );
 };
 
