@@ -16,8 +16,8 @@ const CaseStudiesTestimonials: React.FC = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Client Testimonials</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what our clients have to say
-            about our services.
+            Don&apos;t just take our word for it. Here's what our clients have
+            to say about our services.
           </p>
         </div>
 

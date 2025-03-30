@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 const CaseStudiesPartners: React.FC = () => {
@@ -41,7 +42,7 @@ const CaseStudiesPartners: React.FC = () => {
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold mb-4">Our Trusted Partners</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          We're proud to work with leading organizations across Ghana.
+          We&apos;re proud to work with leading organizations across Ghana.
         </p>
       </div>
 
@@ -52,7 +53,7 @@ const CaseStudiesPartners: React.FC = () => {
             className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="bg-gray-100 h-20 w-full rounded flex items-center justify-center p-4">
-              <img
+              <Image
                 src={partner.logo}
                 alt={partner.name}
                 className="max-h-full max-w-full object-contain"

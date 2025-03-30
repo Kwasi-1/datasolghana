@@ -150,8 +150,8 @@ const HomePage: React.FC = () => {
               What Our Clients Say
             </h2>
             <p className="max-w-2xl mx-auto">
-              Don't just take our word for it. See what our clients have to say
-              about our services.
+              Don&apos;t just take our word for it. See what our clients have to
+              say about our services.
             </p>
           </div>
 
@@ -159,7 +159,7 @@ const HomePage: React.FC = () => {
             <TestimonialCard
               name="John Mensah"
               company="ABC Corporation"
-              quote="Kworld recovered critical business data from our crashed server. Their quick response saved our company thousands of dollars."
+              quote="Datasol recovered critical business data from our crashed server. Their quick response saved our company thousands of dollars."
               rating={5}
             />
             <TestimonialCard
@@ -171,7 +171,7 @@ const HomePage: React.FC = () => {
             <TestimonialCard
               name="Michael Osei"
               company="Global Merchants"
-              quote="Kworld's IT support has been invaluable for our business. They respond quickly to issues and provide proactive solutions."
+              quote="Datasol's IT support has been invaluable for our business. They respond quickly to issues and provide proactive solutions."
               rating={4}
             />
           </div>
@@ -187,7 +187,7 @@ const HomePage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="text-white">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Need Help? Let's Talk!
+                  Need Help? Let&apos;s Talk!
                 </h2>
                 <p className="mb-6">
                   Contact us today for a free consultation. Our experts are

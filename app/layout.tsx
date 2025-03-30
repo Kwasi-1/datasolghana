@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -17,9 +16,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-// ✅ Move QueryClient outside to prevent re-creation on every render
-const queryClient = new QueryClient();
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -36,7 +32,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <QueryClientProvider client={queryClient}> */}
         <TooltipProvider>
           <div>
             <Navbar />
@@ -46,7 +41,6 @@ export default function RootLayout({
           </div>
           <Sonner /> {/* ✅ Sonner should be inside <body> */}
         </TooltipProvider>
-        {/* </QueryClientProvider> */}
       </body>
     </html>
   );

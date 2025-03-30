@@ -155,8 +155,8 @@ const FAQPage: React.FC = () => {
         <div className="bg-kworld-primary rounded-lg p-8 md:p-12 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Still Have Questions?</h2>
           <p className="mb-8 max-w-2xl mx-auto">
-            If you couldn't find the answer you were looking for, our team is
-            ready to help. Contact us today for personalized assistance.
+            If you couldn&apos;t find the answer you were looking for, our team
+            is ready to help. Contact us today for personalized assistance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
