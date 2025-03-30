@@ -147,17 +147,17 @@ const ContactPage: React.FC = () => {
             </div>
 
             {/* Map */}
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            {/* <div className="bg-white p-8 rounded-lg shadow-md">
               <h2 className="text-2xl font-bold mb-6 text-kworld-primary">
                 Our Location
-              </h2>
+              </h2> 
               <div className="h-64 bg-gray-200 rounded-md overflow-hidden">
                 {/* Replace with actual Google Maps embed */}
-                <div className="w-full h-full flex items-center justify-center bg-gray-300">
+                {/* <div className="w-full h-full flex items-center justify-center bg-gray-300">
                   <p className="text-gray-600">Google Maps Embed</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
