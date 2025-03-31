@@ -122,6 +122,7 @@ const ContactForm: React.FC = () => {
           <option value="">Select a service</option>
           <option value="data-recovery">Data Recovery</option>
           <option value="cybersecurity">Cybersecurity Solutions</option>
+          <option value="cybersecurity">Digital Forensic Analysis</option>
           <option value="it-support">IT Support & Networking</option>
           <option value="other">Other</option>
         </select>

@@ -93,58 +93,59 @@ const ServicesPage: React.FC = () => {
     },
     {
       id: "cybersecurity",
-      title: "Cybersecurity Solutions",
+      title: "Digital Forensic Analysis",
       description:
-        "Protect your business from increasingly sophisticated cyber threats with our comprehensive security solutions tailored to your specific needs.",
+        "We provide comprehensive digital forensic analysis to investigate cybersecurity incidents, data breaches, and recover critical evidence for legal proceedings.",
       icon: <Shield size={36} className="text-kworld-primary" />,
       features: [
-        "Vulnerability assessment and penetration testing",
-        "Security monitoring and threat detection",
-        "Incident response and remediation",
-        "Security policy development",
-        "Employee security awareness training",
-        "Compliance and regulatory support",
+        "Computer forensic examination",
+        "E-discovery services",
+        "Forensic data recovery",
+        "Email forensics",
+        "Mobile device forensics",
+        "Cyber incident response",
       ],
     },
     {
       id: "it-support",
-      title: "IT Support & Networking",
+      title: "IT Support & Equipment Sales",
       description:
-        "Keep your business running smoothly with our reliable IT support and networking solutions. We provide both on-site and remote support to address your technology needs.",
+        "Keep your business running smoothly with our reliable IT support, network solutions, and quality IT equipment. We provide both on-site and remote support to address your technology needs.",
       icon: <Wifi size={36} className="text-kworld-primary" />,
       features: [
-        "24/7 helpdesk support",
+        "IT equipment sales",
+        "Computer upgrades & repairs",
         "Network design and implementation",
         "Hardware and software troubleshooting",
-        "System upgrades and maintenance",
+        "System maintenance",
         "IT infrastructure management",
-        "Business continuity planning",
       ],
     },
   ];
 
   const additionalServices = [
     {
-      title: "Cloud Services",
+      title: "Backup Solutions",
       description:
-        "Secure cloud solutions for storage, backup, and application hosting.",
+        "Secure backup solutions to protect your critical business data.",
       icon: <Cloud size={24} className="text-kworld-primary" />,
     },
     {
-      title: "Database Management",
+      title: "IT Consulting",
       description:
-        "Expert database administration, optimization, and recovery services.",
+        "Expert consulting to optimize your IT infrastructure and business processes.",
       icon: <Database size={24} className="text-kworld-primary" />,
     },
     {
-      title: "Security Consulting",
+      title: "Cyber Security",
       description:
-        "Strategic security consulting to protect your business assets.",
+        "Comprehensive security solutions to protect your digital assets.",
       icon: <Lock size={24} className="text-kworld-primary" />,
     },
     {
-      title: "Server Management",
-      description: "Comprehensive server setup, maintenance, and monitoring.",
+      title: "Computer Repairs",
+      description:
+        "Professional repair services for all types of computer systems.",
       icon: <Server size={24} className="text-kworld-primary" />,
     },
   ];
