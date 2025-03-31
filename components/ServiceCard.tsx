@@ -28,7 +28,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <Link href={link} className="w-full">
         <Button
           variant="outline"
-          className="w-full border-kworld-accent text-kworld-accent hover:bg-kworld-accent hover:text-white group flex items-center justify-between"
+          className="w-full border-kworld-accent text-kworld-accent hover:bg-kworld-accent hover:text-white group flex items-center justify-between transition duration-300"
         >
           <span>Learn More</span>
           <svg

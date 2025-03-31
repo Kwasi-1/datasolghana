@@ -85,14 +85,14 @@ const HomePage: React.FC = () => {
             link="/services#data-recovery"
           />
           <ServiceCard
-            title="Cybersecurity Solutions"
+            title="Digital Forensic Analysis"
             description="Protect your business from cyber threats with our advanced security measures and monitoring."
             icon={Shield}
             link="/services#cybersecurity"
           />
           <ServiceCard
-            title="IT Support & Networking"
-            description="Get reliable IT support and network solutions to keep your business running smoothly."
+            title="IT Support & Equipment"
+            description="Get reliable IT support, equipment and network solutions to keep your business running smoothly."
             icon={Wrench}
             link="/services#it-support"
           />
@@ -157,7 +157,7 @@ const HomePage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="text-white">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Need Help? Let&apos;s Talk!
+                  Need Help? Let's Talk!
                 </h2>
                 <p className="mb-6">
                   Contact us today for a free consultation. Our experts are
@@ -165,7 +165,7 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="https://wa.me/233XXXXXXXXX"
+                    href="https://wa.me/233200063564"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center"
@@ -178,7 +178,7 @@ const HomePage: React.FC = () => {
                     </Button>
                   </a>
                   <a
-                    href="tel:+233XXXXXXXXX"
+                    href="tel:+233200063564"
                     className="inline-flex items-center justify-center"
                   >
                     <Button
