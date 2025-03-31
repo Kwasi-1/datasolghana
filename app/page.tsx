@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
         buttonText="Get a Free Quote"
         buttonLink="/contact"
         secondaryButtonText="Chat with an Expert"
-        secondaryButtonLink="https://wa.me/233XXXXXXXXX"
+        secondaryButtonLink="https://wa.me/233200063564"
       />
 
       {/* Trust Section */}

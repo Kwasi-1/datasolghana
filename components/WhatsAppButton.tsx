@@ -5,7 +5,7 @@ import React from "react";
 
 const WhatsAppButton: React.FC = () => {
   const openWhatsApp = () => {
-    window.open("https://wa.me/233XXXXXXXXX", "_blank");
+    window.open("https://wa.me/233200063564", "_blank");
   };
 
   return (
