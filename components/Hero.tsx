@@ -28,7 +28,7 @@ const Hero: React.FC<HeroProps> = ({
   return (
     <section
       className={`relative flex items-center ${
-        isHomePage ? "min-h[700px]" : "h-[65vh]"
+        isHomePage ? "min-h-[700px]" : "h-[70vh]"
       } `}
     >
       {/* Background Overlay */}
@@ -44,8 +44,16 @@ const Hero: React.FC<HeroProps> = ({
       ></div>
 
       {/* Content */}
-      <div className="section-padding relative z-20 text-center text-white">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
+      <div
+        className={`section-padding relative z-20 text-center text-white ${
+          isHomePage && "max-w-3xl mx-auto"
+        }`}
+      >
+        <h1
+          className={`text-4xl md:text-5xl ${
+            isHomePage && "lg:text-6xl"
+          }  font-bold mb-6 animate-fade-in`}
+        >
           {title}
         </h1>
         <p className="text-xl max-w-3xl mx-auto opacity-90 mb-10 animate-fade-in">

@@ -15,6 +15,7 @@ import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import Counter from "@/components/Counter";
 import ContactForm from "@/components/ContactForm";
+import Hero from "@/components/Hero";
 
 const HomePage: React.FC = () => {
   useEffect(() => {
@@ -24,45 +25,14 @@ const HomePage: React.FC = () => {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[700px] flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 z-10"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
-        <div className="section-padding relative z-20 text-white">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
-              Recover Your Data & Secure Your Business
-            </h1>
-            <p
-              className="text-lg md:text-xl mb-8 opacity-90 animate-fade-in"
-              style={{ animationDelay: "0.2s" }}
-            >
-              Industry-leading data recovery & cybersecurity solutions in Ghana
-            </p>
-            <div
-              className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in"
-              style={{ animationDelay: "0.4s" }}
-            >
-              <Link href="/contact">
-                <Button className="bg-kworld-accent hover:bg-kworld-accent/90 text-white shadow-lg hover:scale-105 transition-transform w-full sm:w-auto">
-                  Get a Free Quote
-                </Button>
-              </Link>
-              <a
-                href="https://wa.me/233XXXXXXXXX"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant="outline"
-                  className="bg-transparent border-white text-white hover:bg-white hover:text-kworld-primary w-full sm:w-auto shadow-lg"
-                >
-                  <MessageCircle className="mr-2 h-4 w-4" /> Chat with an Expert
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero
+        title="Recover Your Data & Secure Your Business"
+        subtitle="Industry-leading data recovery & cybersecurity solutions in Ghana"
+        buttonText="Get a Free Quote"
+        buttonLink="/contact"
+        secondaryButtonText="Chat with an Expert"
+        secondaryButtonLink="https://wa.me/233XXXXXXXXX"
+      />
 
       {/* Trust Section */}
       <section className="relative py-16">
