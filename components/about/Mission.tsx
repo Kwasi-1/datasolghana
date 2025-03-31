@@ -43,7 +43,7 @@ const Mission: React.FC = () => {
           {values.map((value, index) => (
             <Card
               key={index}
-              className="border-none shadow-md hover:shadow-xl transition-shadow card-hover animate-fade-in"
+              className="border-none shadow-md hover:shadow-xl transition card-hover animate-fade-in duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="pt-6 text-center">
