@@ -55,7 +55,7 @@ const CaseStudiesPage: React.FC = () => {
                 key={study.id || index}
                 {...study}
                 className="animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                // style={{ animationDelay: `${index * 0.1}s` }}
               />
             ))}
           </div>
