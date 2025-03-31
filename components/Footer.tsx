@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex gap-2 items-center justify-center mb-4">
+            <div className="flex gap-2 items-center mb-4">
               <Image
                 src="/assets/Datasol_logo.png"
                 alt="logo"
