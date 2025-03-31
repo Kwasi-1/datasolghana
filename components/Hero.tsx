@@ -32,7 +32,7 @@ const Hero: React.FC<HeroProps> = ({
       } `}
     >
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-kworld-primary to-kworld-secondary opacity-90 z-10"></div>
 
       {/* Fixed Background Image */}
       <div
