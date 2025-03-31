@@ -18,13 +18,13 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">DataSOL</h3>
+            <h3 className="text-xl font-bold mb-4">DATASOL TECHNOLOGIES</h3>
             <p className="mb-4">
               Industry-leading data recovery & cybersecurity solutions in Ghana.
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61573550787990"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
                   href="/services#cybersecurity"
                   className="hover:text-kworld-accent transition-colors"
                 >
-                  Cybersecurity Solutions
+                  Digital Forensic Analysis
                 </Link>
               </li>
               <li>
@@ -122,7 +122,7 @@ const Footer: React.FC = () => {
                   href="/services#it-support"
                   className="hover:text-kworld-accent transition-colors"
                 >
-                  IT Support & Networking
+                  IT Support & Equipment
                 </Link>
               </li>
               <li>
@@ -130,7 +130,7 @@ const Footer: React.FC = () => {
                   href="/services#cloud-services"
                   className="hover:text-kworld-accent transition-colors"
                 >
-                  Cloud Services
+                  Computer Repairs
                 </Link>
               </li>
             </ul>
@@ -143,24 +143,24 @@ const Footer: React.FC = () => {
               <p className="flex items-center">
                 <Phone size={16} className="mr-2" />
                 <a
-                  href="tel:+233XXXXXXXXX"
+                  href="tel:+233200063564"
                   className="hover:text-kworld-accent transition-colors"
                 >
-                  +233 XX XXX XXXX
+                  0200 063 564
                 </a>
               </p>
               <p className="flex items-center">
                 <Mail size={16} className="mr-2" />
                 <a
-                  href="mailto:info@kworldnetwork.com"
+                  href="mailto:datasoln@outlook.com"
                   className="hover:text-kworld-accent transition-colors"
                 >
-                  info@kworldnetwork.com
+                  datasoln@outlook.com
                 </a>
               </p>
               <p className="flex items-start">
                 <MapPin size={16} className="mr-2 mt-1" />
-                <span>123 Tech Street, Accra, Ghana</span>
+                <span>Adenta Shopping Mall, Adenta, Ghana</span>
               </p>
             </div>
           </div>
@@ -168,8 +168,8 @@ const Footer: React.FC = () => {
 
         <div className="mt-12 border-t border-white/20 pt-8">
           <p className="text-center">
-            &copy; {new Date().getFullYear()} Kworld Network & Support Services.
-            All rights reserved.
+            &copy; {new Date().getFullYear()} DATASOL TECHNOLOGIES. All rights
+            reserved.
           </p>
         </div>
       </div>
