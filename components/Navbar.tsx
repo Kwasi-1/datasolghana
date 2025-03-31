@@ -34,6 +34,12 @@ const Navbar: React.FC = () => {
               Home
             </Link>
             <Link
+              href="/about"
+              className="text-kworld-dark hover:text-kworld-primary/60 transition duration-300 font-medium"
+            >
+              About
+            </Link>
+            <Link
               href="/services"
               className="text-kworld-dark hover:text-kworld-primary/60 transition duration-300 font-medium"
             >
@@ -83,6 +89,13 @@ const Navbar: React.FC = () => {
               onClick={toggleMenu}
             >
               Home
+            </Link>
+            <Link
+              href="/about"
+              className="text-kworld-dark hover:text-kworld-primary font-medium"
+              onClick={toggleMenu}
+            >
+              About
             </Link>
             <Link
               href="/services"
