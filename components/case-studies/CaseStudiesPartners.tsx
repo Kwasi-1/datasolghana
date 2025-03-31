@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
 
 const CaseStudiesPartners: React.FC = () => {
@@ -53,7 +52,7 @@ const CaseStudiesPartners: React.FC = () => {
             className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="bg-gray-100 h-20 w-full rounded flex items-center justify-center p-4">
-              <Image
+              {/* <img
                 src={partner.logo}
                 alt={partner.name}
                 className="max-h-full max-w-full object-contain"
@@ -64,7 +63,7 @@ const CaseStudiesPartners: React.FC = () => {
                     "data:image/svg+xml;charset=UTF-8,%3Csvg width='36' height='36' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ccc' fill-rule='evenodd'%3E%3Cpath d='M5 5h26v26H5z'/%3E%3Cpath d='M18 18h-4v-4h4v4zm4-4h4v4h-4v-4z' fill-opacity='.5'/%3E%3C/g%3E%3C/svg%3E";
                   target.alt = `Logo placeholder for ${partner.name}`;
                 }}
-              />
+              /> */}
             </div>
           </div>
         ))}
