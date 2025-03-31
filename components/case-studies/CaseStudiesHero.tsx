@@ -3,7 +3,7 @@ import React from "react";
 const CaseStudiesHero: React.FC = () => {
   return (
     <section className="relative py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-kworld-primary to-kworld-secondary opacity-90 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-kworld-primary to-kworld-secondary z-10"></div>
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{

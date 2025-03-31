@@ -154,28 +154,21 @@ const ServicesPage: React.FC = () => {
     <div>
       {/* Services Hero */}
       <section className="relative py-24">
-        <div className="absolute inset-0 bg-gradient-to-r from-kworld-primary to-kworld-secondary opacity-90 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-kworld-primary to-kworld-secondary z-10"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
         <div className="section-padding relative z-20 text-white text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
             Expert IT Services Tailored for Your Business
           </h1>
-          <p
-            className="text-xl max-w-3xl mx-auto mb-8 animate-fade-in"
-            style={{ animationDelay: "0.2s" }}
-          >
+          <p className="text-xl max-w-3xl mx-auto mb-8 animate-fade-in">
             Comprehensive solutions to recover your data, secure your systems,
             and optimize your IT infrastructure.
           </p>
-          <Link
-            href="/contact"
-            className="animate-fade-in"
-            style={{ animationDelay: "0.4s" }}
-          >
+          <Link href="/contact">
             <Button
               variant="secondary"
               size="lg"
-              className="shadow-lg hover:scale-105 transition-transform"
+              className="shadow-lg hover:scale-105 transition-transform animate-fade-in"
             >
               Request a Consultation
             </Button>

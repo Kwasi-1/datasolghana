@@ -36,7 +36,7 @@ const Hero: React.FC<HeroProps> = ({
         className={`absolute inset-0 bg-gradient-to-r ${
           isHomePage
             ? "from-black/70 to-black/40"
-            : "from-kworld-primary to-kworld-secondary opacity-90"
+            : "from-kworld-primary to-kworld-secondary"
         } z-10`}
       ></div>
 
