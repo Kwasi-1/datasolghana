@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 interface TestimonialCardProps {
   name: string;
@@ -36,7 +37,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       <blockquote className="text-gray-600 italic mb-6">{quote}</blockquote>
       <div className="flex items-center">
         {image ? (
-          <img
+          <Image
             src={image}
             alt={name}
             className="w-12 h-12 rounded-full object-cover mr-4"

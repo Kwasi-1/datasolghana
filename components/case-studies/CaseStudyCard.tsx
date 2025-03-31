@@ -13,6 +13,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 interface Props extends CaseStudyProps {
   className?: string;
@@ -36,7 +37,7 @@ const CaseStudyCard: React.FC<Props> = ({
     >
       {image && (
         <div className="h-48 overflow-hidden">
-          <img
+          <Image
             src={image}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
