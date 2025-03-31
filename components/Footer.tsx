@@ -10,15 +10,27 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-kworld-primary text-white">
+    <footer className="bg-blue-950 text-white">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">DATASOL TECHNOLOGIES</h3>
+            <div className="flex gap-2 items-center justify-center mb-4">
+              <Image
+                src="/assets/Datasol_logo.png"
+                alt="logo"
+                width={50}
+                height={50}
+              />
+              <div className="text- font-bold text-blue-500">
+                <span className="block">DATASOL</span>{" "}
+                <span className="text-blue-600">TECHNOLOGIES </span>
+              </div>
+            </div>
             <p className="mb-4">
               Industry-leading data recovery & cybersecurity solutions in Ghana.
             </p>

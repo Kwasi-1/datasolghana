@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import Image from "next/image";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,10 +19,16 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-kworld-primary">
+              <Image
+                src="/assets/Datasol_logo.png"
+                alt="logo"
+                width={50}
+                height={80}
+              />
+              {/* <span className="text-2xl font-bold text-kworld-primary">
                 Data
               </span>
-              <span className="text-kworld-accent font-bold">SOL</span>
+              <span className="text-kworld-accent font-bold">SOL</span> */}
             </Link>
           </div>
 
@@ -81,7 +88,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t">
+        <div className="md:hidden bg-white h-screen border-t">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               href="/"
