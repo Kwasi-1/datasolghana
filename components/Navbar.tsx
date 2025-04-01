@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
   const getLinkClasses = (path: string) => {
     return isActive(path)
       ? "text-kworld-accent border-b-2 border-kworld-accent font-bold"
-      : "text-kworld-dark hover:text-kworld-primary font-medium";
+      : "text-kworld-dark hover:text-kworld-secondary/70 transition duration-300 font-medium";
   };
 
   // Get mobile link classes based on active state
