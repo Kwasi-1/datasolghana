@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { Button } from "./ui/button";
-import { toast } from "sonner"; // Import Sonner
+import { toast } from "sonner";
+import emailjs from "emailjs-com";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -27,24 +28,35 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     setLoading(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log("Form submitted:", formData);
-      toast.success("Message Sent!", {
-        description: "We'll get back to you as soon as possible.",
-      });
+    emailjs
+      .send(
+        "service_emw6sir", // from EmailJS dashboard
+        "template_09iu99g", // from EmailJS template
+        formData,
+        "YiMGyzk6LiMweV97L" // from EmailJS account
+      )
+      .then(() => {
+        toast.success("Message Sent!", {
+          description: "We'll get back to you as soon as possible.",
+        });
 
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
-      });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
 
-      setLoading(false);
-    }, 1000);
+        setLoading(false);
+      })
+      .catch((error) => {
+        toast.error("Something went wrong!", {
+          description: "Please try again later.",
+        });
+        console.error("EmailJS Error:", error);
+        setLoading(false);
+      });
   };
 
   return (
@@ -122,7 +134,7 @@ const ContactForm: React.FC = () => {
           <option value="">Select a service</option>
           <option value="data-recovery">Data Recovery</option>
           <option value="cybersecurity">Cybersecurity Solutions</option>
-          <option value="cybersecurity">Digital Forensic Analysis</option>
+          <option value="digital-forensic">Digital Forensic Analysis</option>
           <option value="it-support">IT Support & Networking</option>
           <option value="other">Other</option>
         </select>
