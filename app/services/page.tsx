@@ -253,7 +253,7 @@ const ServicesPage: React.FC = () => {
         <div className="bg-gradient-to-br from-kworld-primary to-kworld-secondary text-white rounded-lg p-8 shadow-xl">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4">
-              Why Choose Kworld Network
+              Why Choose DataSol Technologies
             </h2>
             <p className="max-w-2xl mx-auto">
               We are committed to providing the highest quality IT services with

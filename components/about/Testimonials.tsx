@@ -9,7 +9,7 @@ const Testimonials: React.FC = () => {
       name: "Sarah A.",
       company: "Business Owner",
       quote:
-        "Kworld Network & Support Services recovered my lost data in record time! Highly recommended.",
+        "DataSol Technologies recovered my lost data in record time! Highly recommended.",
       rating: 5,
     },
     {
@@ -23,14 +23,14 @@ const Testimonials: React.FC = () => {
       name: "David L.",
       company: "School Administrator",
       quote:
-        "Kworld helped us set up our entire network infrastructure. The service was impeccable and the team highly knowledgeable.",
+        "DataSol helped us set up our entire network infrastructure. The service was impeccable and the team highly knowledgeable.",
       rating: 5,
     },
     {
       name: "Rebecca K.",
       company: "Retail Manager",
       quote:
-        "After a system failure that nearly cost us all our sales data, Kworld recovered everything within 24 hours. I can't thank them enough!",
+        "After a system failure that nearly cost us all our sales data, DataSol recovered everything within 24 hours. I can't thank them enough!",
       rating: 5,
     },
   ];

@@ -72,19 +72,19 @@ export const caseStudies: CaseStudyProps[] = [
 
 export const testimonials = [
   {
-    quote: "Kworld Network saved our business after what seemed like a catastrophic data loss. Their expertise and quick response were invaluable.",
+    quote: "DataSol saved our business after what seemed like a catastrophic data loss. Their expertise and quick response were invaluable.",
     author: "Emmanuel Agyei",
     position: "CFO, Ghana Commercial Bank",
     rating: 5
   },
   {
-    quote: "The cybersecurity solutions implemented by Kworld have transformed our approach to data protection. We now have confidence in our security posture.",
+    quote: "The cybersecurity solutions implemented by DataSol have transformed our approach to data protection. We now have confidence in our security posture.",
     author: "Abena Mensah",
     position: "CIO, TechSolutions Ghana",
     rating: 5
   },
   {
-    quote: "Working with Kworld for our IT infrastructure upgrade was a seamless experience. They understood our business needs and delivered beyond our expectations.",
+    quote: "Working with DataSol for our IT infrastructure upgrade was a seamless experience. They understood our business needs and delivered beyond our expectations.",
     author: "Kwame Osei",
     position: "Director of Operations, Manufacturing Plus",
     rating: 4
