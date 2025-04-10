@@ -52,7 +52,9 @@ const Hero: React.FC<HeroProps> = ({
       {/* Content */}
       <div
         className={`relative z-20 text-center text-white mx-auto ${
-          isHomePage ? "max-w-3xl" : "section-padding "
+          isHomePage
+            ? "max-w-3xl px-4 md:px-8 -mt-20 md:mt-0"
+            : "section-padding "
         }`}
       >
         <h1
