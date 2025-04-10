@@ -32,6 +32,8 @@ export const metadata: Metadata = {
     "IT support",
     "digital forensics",
     "DataSOL",
+    "DataSOL Technologies",
+    "data recovery services",
   ],
   authors: [{ name: "DataSOL Technologies" }],
   creator: "DataSOL Technologies",
