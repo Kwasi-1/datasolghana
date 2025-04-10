@@ -149,8 +149,8 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="section-padding">
-        <div className="relative rounded-lg overflow-hidden">
+      <section className=" py-16 md:section-padding">
+        <div className="relative md:rounded-lg overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-kworld-primary/90 to-kworld-secondary/90 z-10"></div>
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
           <div className="p-8 md:p-12 relative z-20">
