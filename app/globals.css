@@ -92,6 +92,7 @@
 
   body {
     @apply bg-background text-foreground font-publicsans;
+    background-color: black;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -126,5 +127,26 @@
   
   .whatsapp-button {
     @apply fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg z-50 transition-transform hover:scale-110;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animate-fade-in-delay {
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
