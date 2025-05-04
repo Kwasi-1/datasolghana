@@ -11,41 +11,31 @@ const services = [
     title: "Computer Repair",
     description:
       "Expert hardware and software repair services for all computer types. Fast diagnosis and reliable fixes for any technical issues.",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60",
-    icon: Computer,
+    image: "/assets/computerRepair.webp",
   },
   {
     title: "Data Recovery",
     description:
       "Professional data recovery services for all storage media. We recover your valuable data from damaged, failed, or inaccessible devices.",
-    image:
-      "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&auto=format&fit=crop&q=60",
-    icon: Database,
+    image: "/assets/data_recovery.webp",
   },
   {
     title: "Cybersecurity",
     description:
       "Comprehensive security solutions to protect your digital assets. We provide advanced threat detection, prevention, and response services.",
-    image:
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&auto=format&fit=crop&q=60",
-    icon: Shield,
+    image: "/assets/Cybersecurity.jpg",
   },
   {
     title: "Network Solutions",
     description:
       "End-to-end network design, implementation, and management services. We ensure your network infrastructure is reliable, secure, and scalable.",
-    image:
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&auto=format&fit=crop&q=60",
-    icon: Network,
+    image: "/assets/testimonial_1.webp",
   },
   {
     title: "IT Support",
     description:
       "Reliable and responsive IT support for businesses of all sizes. Our certified technicians provide prompt resolution for all your tech issues.",
-    image:
-      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&auto=format&fit=crop&q=60",
-    icon: Settings,
+    image: "/assets/testimonial_3.webp",
   },
 ];
 
@@ -82,7 +72,6 @@ const Services = () => {
                 title={service.title}
                 description={service.description}
                 image={service.image}
-                icon={service.icon}
               />
             </motion.div>
           ))}

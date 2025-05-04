@@ -1,19 +1,17 @@
-import { useState } from "react";
-import { LucideIcon } from "lucide-react";
+"use client";
+
 import { motion } from "framer-motion";
 
 interface EnhancedServiceCardProps {
   title: string;
   description: string;
   image: string;
-  icon: LucideIcon;
 }
 
 const EnhancedServiceCard = ({
   title,
   description,
   image,
-  icon: Icon,
 }: EnhancedServiceCardProps) => {
   return (
     <motion.div
@@ -27,7 +25,7 @@ const EnhancedServiceCard = ({
       />
 
       {/* Dark Overlay by default */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10" />
 
       {/* Icon and Title (always visible) */}
       <div className="absolute bottom-0 left-0 p-12 z-10">
@@ -40,7 +38,7 @@ const EnhancedServiceCard = ({
         style={{ height: "100%" }}
       >
         <h3 className="text-2xl font-bold mb-3 text-white">{title}</h3>
-        <p className="text-[#F9F9FA]/90 mb-4">{description}</p>
+        <p className="text-[#F9F9FA]/90 text-base mb-4">{description}</p>
         <a
           href="#"
           className="inline-flex items-center text-white hover:text-white/80 font-medium"
