@@ -96,57 +96,62 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-inter font-bold;
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl;
+  }
+
+  h6 {
+    @apply text-base md:text-lg;
+  }
+
+  p {
+    @apply mb-4;
   }
 }
 
+/* Custom component styles */
 @layer components {
-  .gradient-text {
-    @apply bg-gradient-to-r from-kworld-primary to-kworld-accent bg-clip-text text-transparent;
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors 
+    focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50;
   }
   
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
-  }
-
   .btn-primary {
-    @apply bg-kworld-primary text-white hover:bg-kworld-primary/90 px-6 py-3 rounded-md font-medium transition-colors;
+    @apply bg-primary text-white hover:bg-primary-dark;
   }
-
-  .btn-secondary {
-    @apply bg-kworld-accent text-white hover:bg-kworld-accent/90 px-6 py-3 rounded-md font-medium transition-colors;
-  }
-
+  
   .btn-outline {
-    @apply border border-kworld-primary text-kworld-primary hover:bg-kworld-primary hover:text-white px-6 py-3 rounded-md font-medium transition-colors;
+    @apply border border-white text-white hover:bg-white hover:text-bytefix-bg;
+  }
+  
+  .container-custom {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
   }
   
   .section-padding {
-    @apply py-16 px-4 md:px-8 max-w-7xl mx-auto;
-  }
-  
-  .whatsapp-button {
-    @apply fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg z-50 transition-transform hover:scale-110;
-  }
-}
-
-@layer utilities {
-  .animate-fade-in {
-    animation: fadeIn 1s ease-out forwards;
+    @apply py-16 md:py-24;
   }
 
-  .animate-fade-in-delay {
-    animation: fadeIn 1.2s ease-out forwards;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
   }
 }
