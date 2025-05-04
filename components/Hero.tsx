@@ -3,7 +3,7 @@ import { Facebook, Instagram, Linkedin, X } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative text-white min-h-screen overflow-hidden">
+    <section className="relative text-white min-h-[700px] overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -12,20 +12,20 @@ export default function HeroSection() {
             "url('https://cdn.prod.website-files.com/6753c944298bec1f730af5a1/6753f11761e252d7240e7888_hero-image.webp')",
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black to-black/55"></div>
+        {/* <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" /> */}
       </div>
 
       {/* Overlay Content */}
-      <div className="relative z-10 flex flex-col min-h-screen max-w-7xl mx-auto">
+      <div className="relative z-10 flex flex-col min-h-screen justify-between max-w-7xl mx-auto">
         <Navbar />
 
         <div className="relative flex-grow grid grid-cols-1 md:grid-cols-2 items-center px-6 md:px-16 lg:px-0 py-24 gap-10 ">
           {/* Left Content */}
           <div className="space-y-6 animate-fade-in">
-            <span className="text-sm uppercase tracking-widest text-[#00E0FF] font-semibold">
+            {/* <span className="text-sm uppercase tracking-widest text-[#00E0FF] font-semibold">
               Bytefix Repair Solutions
-            </span>
+            </span> */}
             <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white drop-shadow-md">
               Fixing Tech Issues <br /> Fast and Right
             </h1>

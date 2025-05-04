@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { Button } from "./ui/button";
 import Image from "next/image";
 
 const Navbar: React.FC = () => {
@@ -15,88 +14,77 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Function to determine if a link is active
   const isActive = (path: string) => {
     if (path === "/" && pathname === "/") return true;
     if (path !== "/" && pathname.startsWith(path)) return true;
     return false;
   };
 
-  // Get link classes based on active state
   const getLinkClasses = (path: string) => {
     return isActive(path)
-      ? "text-kworld-accent border-b-2 border-kworld-accent font-bold"
-      : "text-kworld-dark hover:text-kworld-secondary/70 transition duration-300 font-medium";
+      ? "text-blue-500 font-semibold"
+      : "text-white hover:text-blue-400 transition duration-300 font-medium";
   };
 
-  // Get mobile link classes based on active state
   const getMobileLinkClasses = (path: string) => {
     return isActive(path)
-      ? "block px-3 py-2 rounded-md text-base font-bold text-kworld-accent bg-gray-50 border-l-4 border-kworld-accent"
-      : "block px-3 py-2 rounded-md text-base font-medium text-kworld-dark hover:text-kworld-primary hover:bg-gray-100";
+      ? "block px-4 py-2 text-blue-500 font-bold bg-gray-100 rounded"
+      : "block px-4 py-2 text-gray-800 font-medium hover:bg-gray-200 rounded";
   };
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0 flex items-center">
-              <Image
-                src="/assets/Datasol_logo.png"
-                alt="logo"
-                width={50}
-                height={80}
-              />
-              {/* <span className="text-2xl font-bold text-kworld-primary">
-                Data
-              </span>
-              <span className="text-kworld-accent font-medium">Network</span> */}
-            </Link>
-          </div>
+    <nav className=" z-50 border-b border-stone-100/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-0">
+        <div className="flex items-center justify-between h-28">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <Image
+              src="/assets/Datasol_logo.png"
+              alt="logo"
+              width={50}
+              height={80}
+            />
+            {/* <span className="text-white text-xl font-semibold">
+              Byte<span className="text-gray-300">Fix</span>
+            </span> */}
+          </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/" className={getLinkClasses("/")}>
               Home
             </Link>
             <Link href="/about" className={getLinkClasses("/about")}>
-              About
+              About us
             </Link>
             <Link href="/services" className={getLinkClasses("/services")}>
-              Services
+              Service
             </Link>
-            <Link
-              href="/case-studies"
-              className={getLinkClasses("/case-studies")}
-            >
-              Case Studies
+            <Link href="/blog" className={getLinkClasses("/blog")}>
+              Blog
             </Link>
-            <Link href="/faq" className={getLinkClasses("/faq")}>
-              FAQ
+            <Link href="/contact" className={getLinkClasses("/contact")}>
+              Contact us
+            </Link>
+            <Link href="/pages" className={getLinkClasses("/pages")}>
+              Pages
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
+          {/* CTA */}
+          <div className="hidden md:block">
             <Link href="/contact">
-              <Button
-                variant="default"
-                className={`${
-                  isActive("/contact")
-                    ? "bg-kworld-accent"
-                    : "bg-kworld-primary"
-                } hover:bg-kworld-primary/90`}
-              >
-                Contact Us
-              </Button>
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md transition">
+                Request a Repair Today
+              </button>
             </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-kworld-dark hover:text-kworld-primary hover:bg-gray-100 focus:outline-none"
+              className="text-white hover:text-blue-500 p-2"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -104,10 +92,10 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white h-screen border-t">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden bg-white border-t shadow-lg">
+          <div className="px-4 py-3 space-y-2">
             <Link
               href="/"
               className={getMobileLinkClasses("/")}
@@ -120,39 +108,40 @@ const Navbar: React.FC = () => {
               className={getMobileLinkClasses("/about")}
               onClick={toggleMenu}
             >
-              About
+              About us
             </Link>
             <Link
               href="/services"
               className={getMobileLinkClasses("/services")}
               onClick={toggleMenu}
             >
-              Services
+              Service
             </Link>
             <Link
-              href="/case-studies"
-              className={getMobileLinkClasses("/case-studies")}
+              href="/blog"
+              className={getMobileLinkClasses("/blog")}
               onClick={toggleMenu}
             >
-              Case Studies
-            </Link>
-            <Link
-              href="/faq"
-              className={getMobileLinkClasses("/faq")}
-              onClick={toggleMenu}
-            >
-              FAQ
+              Blog
             </Link>
             <Link
               href="/contact"
-              className={`${
-                isActive("/contact")
-                  ? "block px-3 py-2 rounded-md text-base font-bold text-white bg-kworld-accent"
-                  : "block px-3 py-2 rounded-md text-base font-medium text-white bg-kworld-primary hover:bg-kworld-primary/90"
-              }`}
+              className={getMobileLinkClasses("/contact")}
               onClick={toggleMenu}
             >
-              Contact Us
+              Contact us
+            </Link>
+            <Link
+              href="/pages"
+              className={getMobileLinkClasses("/pages")}
+              onClick={toggleMenu}
+            >
+              Pages
+            </Link>
+            <Link href="/contact" onClick={toggleMenu}>
+              <button className="w-full mt-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-md transition">
+                Request a Repair Today
+              </button>
             </Link>
           </div>
         </div>

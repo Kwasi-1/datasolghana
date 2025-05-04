@@ -71,10 +71,10 @@ export default function RootLayout({
         <TooltipProvider>
           <div>
             <Sonner />
-            <Navbar />
+            {/* <Navbar /> */}
             {children}
             <Footer />
-            <WhatsAppButton />
+            {/* <WhatsAppButton /> */}
           </div>
         </TooltipProvider>
       </body>

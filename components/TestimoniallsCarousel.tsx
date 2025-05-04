@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 
 type Testimonial = {
   image: string;
@@ -15,8 +16,7 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    image:
-      "https://cdn.prod.website-files.com/6753c944298bec1f730af5a1/67543fddd5a3be48349e901b_content-card-img-3.webp",
+    image: "/assets/testimonial_1.webp",
     heading: "Our Customer Stories",
     description:
       "Learn how our timely IT solutions help growing companies and why local businesses rely on DataSol.",
@@ -26,8 +26,7 @@ const testimonials: Testimonial[] = [
     role: "Web Developer",
   },
   {
-    image:
-      "https://cdn.prod.website-files.com/6753c944298bec1f730af5a1/67545d4bbb85ddbc775bebb9_features-img.webp",
+    image: "/assets/testimonial_2.webp",
     heading: "Success Stories",
     description:
       "Discover how DataSol enabled businesses to overcome IT challenges with ease and efficiency.",
@@ -37,8 +36,7 @@ const testimonials: Testimonial[] = [
     role: "Tech Solutions Ltd.",
   },
   {
-    image:
-      "https://cdn.prod.website-files.com/6753c944298bec1f730af5a1/67543f0d01e9ceffa8950b27_content-card-img.webp",
+    image: "/assets/testimonial_3.webp",
     heading: "Success Stories",
     description:
       "Discover how DataSol enabled businesses to overcome IT challenges with ease and efficiency.",
@@ -51,27 +49,54 @@ const testimonials: Testimonial[] = [
 
 export default function TestimonialCarousel() {
   const [index, setIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+  const startTimer = () => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => {
+      if (!isHovered) {
+        setIndex((prev) => (prev + 1) % testimonials.length);
+      }
+    }, 5000);
+  };
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    startTimer();
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [isHovered]);
+
+  const handlePrev = () => {
+    setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    // Reset timer when manually navigating
+    startTimer();
+  };
+
+  const handleNext = () => {
+    setIndex((prev) => (prev + 1) % testimonials.length);
+    // Reset timer when manually navigating
+    startTimer();
+  };
 
   const testimonial = testimonials[index];
 
   return (
-    <div className="flex flex-col md:flex-row gap-5 w-full min-h-[400px] overflow-hidden rounded-2xl text-white">
-      <div className="md:w-1/3 h-full w-full relative  rounded-2xl overflow-hidden group">
-        <img
+    <div
+      className="flex flex-col md:flex-row gap-5 w-full min-h-[400px] overflow-hidden rounded-2xl text-white"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="md:w-1/3 h-full w-full relative rounded-2xl overflow-hidden group">
+        <Image
+          width={500}
+          height={500}
           src={testimonial.image}
           alt="Customer"
           className="w-full h-full object-cover rounded-2xl fade-in-50"
         />
-
         <div className="absolute inset-0 bg-gradient-to-t from-black to-black/20 z-10 transition-opacity duration-300 group-hover:opacity-30" />
-
         <div className="absolute bottom-8 px-7 space-y-4 z-20 text-white">
           <h2 className="text-2xl font-semibold">{testimonial.heading}</h2>
           <p className="text-[15px] max-w-sm pb-4">{testimonial.description}</p>
@@ -94,23 +119,26 @@ export default function TestimonialCarousel() {
               icon="ri:double-quotes-l"
               className="text-blue-500 text-6xl mb-12"
             />
-            <div className="flex flex-col gap-4 h-[70%] justify-between">
+            <div className="flex flex-col gap-4 h-[70%] justify-between ease-in-out">
               <p className="text-lg md:text-xl leading-relaxed mb-10">
                 {testimonial.quote}
               </p>
 
               <div className="flex justify-between gap-4">
                 <div className="space-y-1">
-                  <p className="font-semibold text-xֱl">{testimonial.author}</p>
+                  <p className="font-semibold text-xl">{testimonial.author}</p>
                   <p className="text-gray-400 text-lg">{testimonial.role}</p>
                 </div>
 
                 {/* Navigation Arrows */}
                 <div className="flex justify-end gap-6 mt-10 text-white">
-                  <button aria-label="Previous testimonial">
+                  <button
+                    aria-label="Previous testimonial"
+                    onClick={handlePrev}
+                  >
                     <Icon icon="lucide:arrow-left" className="text-2xl" />
                   </button>
-                  <button aria-label="Next testimonial">
+                  <button aria-label="Next testimonial" onClick={handleNext}>
                     <Icon icon="lucide:arrow-right" className="text-2xl" />
                   </button>
                 </div>
