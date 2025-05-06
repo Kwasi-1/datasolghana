@@ -33,7 +33,7 @@ const AboutPage: React.FC = () => {
       <TestimonialsSection />
       <FAQSection />
       <ContactSection />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

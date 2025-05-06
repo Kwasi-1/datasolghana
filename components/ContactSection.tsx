@@ -24,21 +24,21 @@ const ContactMethod = ({
   link_2_Text,
 }: ContactMethodProps) => {
   return (
-    <div className="flex flex-col gap-4 items-start mb-8">
-      <div className="bg-primary rounded-full p-3 mr-4">
-        <Icon className="w-6 h-6 text-white" />
+    <div className="flex flex-col gap-3 sm:gap-4 items-start mb-6 sm:mb-8">
+      <div className="bg-primary rounded-full p-2 sm:p-3 mr-3 sm:mr-4">
+        <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
       </div>
-      <p className="mb-1">{sectionTitle}</p>
+      <p className="mb-1 text-sm sm:text-base">{sectionTitle}</p>
       <div className="flex flex-col">
         {/* <h4 className="font-bold mb-1">{title}</h4> */}
         {/* <p className="text-lg mb-1">{info}</p> */}
         {link && (
-          <a href={link} className="text-lg">
+          <a href={link} className="text-base sm:text-lg hover:text-primary transition-colors">
             {linkText}
           </a>
         )}
         {link_2 && (
-          <a href={link_2} className="text-lg">
+          <a href={link_2} className="text-base sm:text-lg hover:text-primary transition-colors">
             {link_2_Text}
           </a>
         )}
@@ -54,32 +54,32 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="py-20 bg-[#0A0A0A]"
+      className="py-12 sm:py-16 md:py-20 bg-[#0A0A0A]"
       style={{
         backgroundImage: "url('/assets/contact_image.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="container-custom lg:w-[80%] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container-custom px-4 sm:px-6 lg:px-8 lg:w-[80%] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <motion.div
             ref={ref}
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
               Need quick help?
-              <br />
+              <br className="hidden sm:block" />
               Contact us now!
             </h2>
-            <p className="text-gray-400 mb-8">
+            <p className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8">
               Our team of experts is ready to assist you with any tech issues or
               questions. Reach out to us through any of these channels for
               prompt support.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
               <ContactMethod
                 icon={MapPin}
                 sectionTitle="Address"
@@ -91,7 +91,7 @@ const ContactSection = () => {
                 icon={Phone}
                 sectionTitle="Contact"
                 link="tel:+233200063564"
-                linkText=" 0200 063 564"
+                linkText="0200 063 564"
                 link_2="mailto:datasoln@outlook.com"
                 link_2_Text="datasoln@outlook.com"
               />
@@ -104,7 +104,7 @@ const ContactSection = () => {
                 linkText="Send Email"
               /> */}
             </div>
-            <p className="text-lg border-t border-gray-800 pt-8">
+            <p className="text-base sm:text-lg border-t border-gray-800 pt-6 sm:pt-8">
               Office Hours: Mon – Sat: 8:00 AM – 10:00 PM
             </p>
 

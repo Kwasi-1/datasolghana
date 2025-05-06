@@ -28,45 +28,43 @@ const Navbar: React.FC = () => {
 
   const getMobileLinkClasses = (path: string) => {
     return isActive(path)
-      ? "block px-4 py-2 text-blue-500 font-bold bg-gray-100 rounded"
-      : "block px-4 py-2 text-gray-800 font-medium hover:bg-gray-200 rounded";
+      ? "block px-4 py-3 text-blue-500 font-bold bg-gray-50 rounded-lg"
+      : "block px-4 py-3 text-gray-800 font-medium hover:bg-gray-50 rounded-lg transition-colors";
   };
 
   return (
-    <nav className=" z-50 border-b border-stone-100/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-0">
-        <div className="flex items-center justify-between h-28">
+    <nav className="z-50 border-b border-stone-100/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20 sm:h-24 md:h-28">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/assets/Datasol_logo.png"
               alt="logo"
-              width={50}
-              height={80}
+              width={40}
+              height={64}
+              className="w-8 h-auto sm:w-10 md:w-[50px]"
             />
-            {/* <span className="text-white text-xl font-semibold">
-              Byte<span className="text-gray-300">Fix</span>
-            </span> */}
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className={getLinkClasses("/")}>
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+            <Link href="/" className={`${getLinkClasses("/")} text-sm lg:text-base`}>
               Home
             </Link>
-            <Link href="/about" className={getLinkClasses("/about")}>
+            <Link href="/about" className={`${getLinkClasses("/about")} text-sm lg:text-base`}>
               About us
             </Link>
-            <Link href="/services" className={getLinkClasses("/services")}>
+            <Link href="/services" className={`${getLinkClasses("/services")} text-sm lg:text-base`}>
               Service
             </Link>
-            <Link href="/blog" className={getLinkClasses("/blog")}>
+            <Link href="/blog" className={`${getLinkClasses("/blog")} text-sm lg:text-base`}>
               Blog
             </Link>
-            <Link href="/contact" className={getLinkClasses("/contact")}>
+            <Link href="/contact" className={`${getLinkClasses("/contact")} text-sm lg:text-base`}>
               Contact us
             </Link>
-            <Link href="/pages" className={getLinkClasses("/pages")}>
+            <Link href="/pages" className={`${getLinkClasses("/pages")} text-sm lg:text-base`}>
               Pages
             </Link>
           </div>
@@ -74,7 +72,7 @@ const Navbar: React.FC = () => {
           {/* CTA */}
           <div className="hidden md:block">
             <Link href="/contact">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md transition">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-md transition text-sm lg:text-base lg:px-6">
                 Request a Repair Today
               </button>
             </Link>
@@ -84,7 +82,8 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="text-white hover:text-blue-500 p-2"
+              className="text-white hover:text-blue-500 p-2 rounded-lg hover:bg-white/10 transition-colors"
+              aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -95,7 +94,7 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t shadow-lg">
-          <div className="px-4 py-3 space-y-2">
+          <div className="px-4 py-3 space-y-1">
             <Link
               href="/"
               className={getMobileLinkClasses("/")}
@@ -138,8 +137,8 @@ const Navbar: React.FC = () => {
             >
               Pages
             </Link>
-            <Link href="/contact" onClick={toggleMenu}>
-              <button className="w-full mt-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-md transition">
+            <Link href="/contact" onClick={toggleMenu} className="block mt-4">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-3 rounded-lg transition text-sm">
                 Request a Repair Today
               </button>
             </Link>
