@@ -91,40 +91,93 @@
   }
 
   body {
-    @apply bg-background text-foreground font-publicsans;
+    @apply bg-bytefix-dark text-bytefix-lightGray;
+    font-family: 'Inter', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-inter font-bold;
+    @apply font-bold text-bytefix-text; 
+  }
+
+  h1 {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-2xl sm:text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl sm:text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+
+  h5 {
+    @apply text-base sm:text-lg md:text-xl;
+  }
+
+  h6 {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+
+  p {
+    @apply mb-3 sm:mb-4 text-base sm:text-lg md:text-xl;
   }
 }
 
+/* Custom component styles */
 @layer components {
-  .gradient-text {
-    @apply bg-gradient-to-r from-kworld-primary to-kworld-accent bg-clip-text text-transparent;
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm sm:text-base font-medium transition-colors 
+    focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50
+    px-3 sm:px-4 py-2 sm:py-2.5;
   }
   
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
-  }
-
   .btn-primary {
-    @apply bg-kworld-primary text-white hover:bg-kworld-primary/90 px-6 py-3 rounded-md font-medium transition-colors;
+    @apply bg-primary text-white hover:bg-primary-dark;
   }
-
-  .btn-secondary {
-    @apply bg-kworld-accent text-white hover:bg-kworld-accent/90 px-6 py-3 rounded-md font-medium transition-colors;
-  }
-
+  
   .btn-outline {
-    @apply border border-kworld-primary text-kworld-primary hover:bg-kworld-primary hover:text-white px-6 py-3 rounded-md font-medium transition-colors;
+    @apply border border-white text-white hover:bg-white hover:text-bytefix-bg;
+  }
+  
+  .container-custom {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
   }
   
   .section-padding {
-    @apply py-16 px-4 md:px-8 max-w-7xl mx-auto;
+    @apply py-8 sm:py-12 md:py-16 lg:py-24;
   }
-  
-  .whatsapp-button {
-    @apply fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg z-50 transition-transform hover:scale-110;
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  /* Additional responsive utility classes */
+  .text-responsive {
+    @apply text-sm sm:text-base md:text-lg lg:text-xl;
+  }
+
+  .heading-responsive {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  .padding-responsive {
+    @apply p-4 sm:p-6 md:p-8 lg:p-10;
+  }
+
+  .margin-responsive {
+    @apply m-4 sm:m-6 md:m-8 lg:m-10;
+  }
+
+  .gap-responsive {
+    @apply gap-3 sm:gap-4 md:gap-6 lg:gap-8;
+  }
+
+  .rounded-responsive {
+    @apply rounded-lg sm:rounded-xl md:rounded-2xl;
   }
 }

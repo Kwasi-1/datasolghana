@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { toast } from "sonner";
 import emailjs from "emailjs-com";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
-const ContactForm: React.FC = () => {
+const ContactForm: React.FC<{ dark?: boolean }> = ({ dark = false }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -60,111 +62,113 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div>
-        <label
-          htmlFor="name"
-          className="block text-sm font-medium text-gray-700 mb-1"
-        >
-          Full Name *
-        </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kworld-primary"
-        />
-      </div>
+    <div
+      className={
+        dark
+          ? "bg-bytefix-bg text-white rounded-[20px] p-6 sm:p-8 md:p-12 lg:p-14"
+          : "bg-white text-black rounded-[20px] p-6 sm:p-8 md:p-12 border border-gray-800"
+      }
+    >
+      <h3
+        className={
+          dark
+            ? "text-xl sm:text-2xl font-[600] mb-3 sm:mb-4 text-white"
+            : "text-xl sm:text-2xl font-[600] mb-3 sm:mb-4 text-black/90"
+        }
+      >
+        {dark ? "Quick Contact Form" : "Send Us a Message"}
+      </h3>
+      <p
+        className={
+          dark
+            ? "text-base sm:text-lg tracking-tight text-gray-300 mb-6 sm:mb-8"
+            : "text-base sm:text-lg tracking-tight text-gray-600 mb-6 sm:mb-8"
+        }
+      >
+        Have a question or need support? Fill out the form below, and we'll get
+        back to you as soon as possible
+      </p>
+      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+        <div className="grid grid-cols-1 gap-4 sm:gap-6">
+          <Input
+            id="name"
+            name="name"
+            placeholder="Full Name"
+            className={
+              dark
+                ? "rounded-lg text-white bg-[#ffffff] pl-4 sm:pl-5 h-12 sm:h-14 border-stone-700 border-2 focus:border-primary text-sm sm:text-base placeholder-gray-400"
+                : "rounded-lg text-[#929292] pl-4 sm:pl-5 h-12 sm:h-14 border-stone-200 border-2 focus:border-primary text-sm sm:text-base"
+            }
+            value={formData.name}
+            onChange={handleChange}
+          />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-700 mb-1"
-          >
-            Email Address *
-          </label>
-          <input
-            type="email"
+          <Input
             id="email"
+            type="email"
             name="email"
-            required
+            placeholder="Email address"
+            className={
+              dark
+                ? "rounded-lg h-12 sm:h-14 border-stone-700 bg-[#18191c] text-white pl-4 sm:pl-5 border-2 focus:border-primary text-sm sm:text-base placeholder-gray-400"
+                : "rounded-lg h-12 sm:h-14 border-stone-200 pl-4 sm:pl-5 border-2 focus:border-primary text-sm sm:text-base"
+            }
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kworld-primary"
           />
-        </div>
-        <div>
-          <label
-            htmlFor="phone"
-            className="block text-sm font-medium text-gray-700 mb-1"
-          >
-            Phone Number *
-          </label>
-          <input
-            type="tel"
+
+          <Input
             id="phone"
             name="phone"
-            required
+            placeholder="Phone Number"
+            className={
+              dark
+                ? "rounded-lg h-12 sm:h-14 border-stone-700 bg-[#18191c] text-white pl-4 sm:pl-5 border-2 focus:border-primary text-sm sm:text-base placeholder-gray-400"
+                : "rounded-lg h-12 sm:h-14 border-stone-200 pl-4 sm:pl-5 border-2 focus:border-primary text-sm sm:text-base"
+            }
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kworld-primary"
+          />
+
+          <Textarea
+            id="message"
+            name="message"
+            rows={4}
+            placeholder="How can we help you?"
+            className={
+              dark
+                ? "rounded-lg border-stone-700 bg-[#18191c] text-white pl-4 sm:pl-5 border-2 focus:border-primary text-sm sm:text-base placeholder-gray-400"
+                : "rounded-lg border-stone-200 pl-4 sm:pl-5 border-2 focus:border-primary text-sm sm:text-base"
+            }
+            value={formData.message}
+            onChange={handleChange}
           />
         </div>
-      </div>
 
-      <div>
-        <label
-          htmlFor="service"
-          className="block text-sm font-medium text-gray-700 mb-1"
+        <Button
+          type="submit"
+          className={
+            dark
+              ? "w-full bg-primary text-base sm:text-[17px] rounded-lg hover:border hover:text-[#0A0A0A] hover:bg-white py-4 sm:py-6"
+              : "w-full bg-primary text-base sm:text-[17px] rounded-lg hover:border hover:text-[#0A0A0A] hover:bg-white py-4 sm:py-6"
+          }
+          disabled={loading}
         >
-          Service Needed *
-        </label>
-        <select
-          id="service"
-          name="service"
-          required
-          value={formData.service}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kworld-primary"
-        >
-          <option value="">Select a service</option>
-          <option value="data-recovery">Data Recovery</option>
-          <option value="cybersecurity">Cybersecurity Solutions</option>
-          <option value="digital-forensic">Digital Forensic Analysis</option>
-          <option value="it-support">IT Support & Networking</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
+          {loading ? "Sending..." : "Request a Repair Today"}
+        </Button>
 
-      <div>
-        <label
-          htmlFor="message"
-          className="block text-sm font-medium text-gray-700 mb-1"
+        <p
+          className={
+            dark
+              ? "text-xs text-gray-500 text-center"
+              : "text-xs text-gray-400 text-center"
+          }
         >
-          Message
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          rows={4}
-          value={formData.message}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kworld-primary"
-        ></textarea>
-      </div>
-
-      <Button
-        type="submit"
-        className="w-full bg-kworld-primary hover:bg-kworld-primary/90 text-white py-3"
-        disabled={loading}
-      >
-        {loading ? "Sending..." : "Get a Free Quote"}
-      </Button>
-    </form>
+          By submitting this form, you agree to our Privacy Policy and Terms of
+          Service.
+        </p>
+      </form>
+    </div>
   );
 };
 
