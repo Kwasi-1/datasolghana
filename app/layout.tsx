@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DataSOL Technologies",
     description: "Your trusted partner in data-driven solutions.",
-    url: "https://yourdomain.com",
+    url: "https://www.datasolghana.net",
     siteName: "DataSOL Technologies",
     images: [
       {
@@ -57,6 +57,10 @@ export const metadata: Metadata = {
     title: "DataSOL Technologies",
     description: "Your trusted partner in data-driven solutions.",
     images: ["/og-image.jpg"],
+  },
+
+  other: {
+    "google-site-verification": "caRvBt_kCAF5N2nTWLLhpd84mKGMQPaorTWfm4IPL_s",
   },
 };
 
