@@ -65,11 +65,19 @@ module.exports = {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				brand: {
+          primary: "#007BFF",
+          primaryLight: "#00C6FF",
+          secondary: "#18A170",
+          darkAccent: "#102B5F",
+          softBg: "#EAF6FF",
+        },
 			},
 			fontFamily: {
 				inter: ['Inter', 'sans-serif'],
-				publicsans: ['Public Sans', 'sans-serif']
+				publicsans: ['Public Sans', 'sans-serif'],
+				gordita: ['Gordita', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
