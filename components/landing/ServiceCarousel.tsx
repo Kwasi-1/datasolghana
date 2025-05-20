@@ -5,6 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { ChevronRight } from "lucide-react";
 import { Icon } from "@iconify/react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const icon = "/assets/future-plan.png";
 
@@ -98,7 +99,13 @@ export default function ServiceCarousel() {
               }`}
             >
               <div className="relative h-full flex flex-col gap-4 bg-white rounded-[30px] p-8 pt-12 md:p-12 md:pb-20 items-start transition duration-300 cursor-pointer">
-                <img src={service.icon} alt="icon" className="w-6 h-6" />
+                <Image
+                  src={service.icon}
+                  alt="icon"
+                  width={24}
+                  height={24}
+                  className="w-6 h-6"
+                />
                 <div className="text-2xl font-semibold text-gray-900">
                   {service.title}
                 </div>
