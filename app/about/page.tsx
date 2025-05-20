@@ -12,12 +12,7 @@ import ContactCTA from "@/components/about/ContactCTA";
 const AboutPage: React.FC = () => {
   return (
     <div className="about-page">
-      <Hero
-        title="Your Trusted IT Solutions Partner"
-        subtitle="With over a decade of experience, we help businesses recover data, secure systems, and optimize IT infrastructures."
-        buttonText="Get a Free Consultation"
-        buttonLink="/contact"
-      />
+      <Hero />
       <CompanyOverview />
       <Mission />
       <WhyChooseUs />
