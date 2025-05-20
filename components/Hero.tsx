@@ -24,7 +24,7 @@ const HeroSection = () => {
     <div className="relative">
       <section
         id="herosection"
-        className="relative flex items-center justify-center h-[700px] text-center text-white select-none"
+        className="relative flex items-center justify-center max-h-[700px] h-screen text-center text-white select-none"
       >
         {/* Background Image Slider */}
         <div className="absolute inset-0 overflow-hidden bg-[#225EA6]">
