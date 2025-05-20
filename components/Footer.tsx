@@ -5,7 +5,7 @@ import Image from "next/image";
 import { navLinks } from "./Navbar";
 
 const quickLinks = navLinks;
-const logo = "/assets/datasol_logo.png";
+const logo = "/assets/Datasol_logo.png";
 
 const socialLinks = [
   {
