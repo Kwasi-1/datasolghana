@@ -6,17 +6,15 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 function BackToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show/hide button based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 100);
+      setIsVisible(window.scrollY > 300);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll to top handler
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

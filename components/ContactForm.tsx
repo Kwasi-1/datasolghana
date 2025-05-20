@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { toast } from "sonner";
 import emailjs from "emailjs-com";
+import { InputField } from "./shared/InputField";
+import { SelectField } from "./shared/SelectField";
+import { TextareaField } from "./shared/TextareaField";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +15,8 @@ const ContactForm: React.FC = () => {
     phone: "",
     service: "",
     message: "",
+    recoveryType: "",
+    brand: "",
   });
   const [loading, setLoading] = useState(false);
 
@@ -46,6 +51,8 @@ const ContactForm: React.FC = () => {
           phone: "",
           service: "",
           message: "",
+          recoveryType: "",
+          brand: "",
         });
 
         setLoading(false);
@@ -60,111 +67,112 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div>
-        <label
-          htmlFor="name"
-          className="block text-sm font-medium text-gray-700 mb-1"
-        >
-          Full Name *
-        </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kworld-primary"
-        />
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-700 mb-1"
-          >
-            Email Address *
-          </label>
-          <input
-            type="email"
-            id="email"
+    <div className="bg-white max-w-4xl mx-auto py-20 px-5 md:px-12 rounded-2xl md:rounded-3xl">
+      <h2 className="text-4xl font-bold mb-4">Need Any Help? Drop us a Line</h2>
+      <p className="mb-6 text-gray-600">
+        Fill out the form below and we will get back to you shortly.
+      </p>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 md:gap-x-8">
+          <InputField
+            label="Full Name"
+            name="name"
+            value={formData.name}
+            required
+            onChange={handleChange}
+          />
+          <InputField
+            label="Email Address"
             name="email"
-            required
             value={formData.email}
-            onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kworld-primary"
-          />
-        </div>
-        <div>
-          <label
-            htmlFor="phone"
-            className="block text-sm font-medium text-gray-700 mb-1"
-          >
-            Phone Number *
-          </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
             required
-            value={formData.phone}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kworld-primary"
           />
+
+          <InputField
+            label="Phone Number"
+            name="phone"
+            type="tel"
+            value={formData.phone}
+            required
+            onChange={handleChange}
+          />
+
+          <SelectField
+            label="Service Needed"
+            name="service"
+            value={formData.service}
+            required
+            onChange={(val) =>
+              setFormData((prev) => ({ ...prev, service: val }))
+            }
+            options={[
+              { label: "Data Recovery", value: "data-recovery" },
+              { label: "Cybersecurity Solutions", value: "cybersecurity" },
+              { label: "Digital Forensic Analysis", value: "digital-forensic" },
+              { label: "IT Support & Networking", value: "it-support" },
+              { label: "Other", value: "other" },
+            ]}
+          />
+
+          {formData.service === "data-recovery" && (
+            <>
+              <SelectField
+                label="Type of Drive"
+                name="recoveryType"
+                value={formData.recoveryType}
+                required
+                onChange={(val) =>
+                  setFormData((prev) => ({ ...prev, recoveryType: val }))
+                }
+                options={[
+                  { label: "Internal Drive", value: "internal" },
+                  { label: "External Drive", value: "external" },
+                ]}
+              />
+
+              <SelectField
+                label="DDrive Brand"
+                name="brand"
+                value={formData.brand}
+                required
+                onChange={(val) =>
+                  setFormData((prev) => ({ ...prev, brand: val }))
+                }
+                options={[
+                  { label: "Seagate", value: "seagate" },
+                  { label: "Western Digital", value: "western-digital" },
+                  { label: "Toshiba", value: "toshiba" },
+                  { label: "Samsung", value: "samsung" },
+                  { label: "Other", value: "other" },
+                ]}
+              />
+            </>
+          )}
         </div>
-      </div>
 
-      <div>
-        <label
-          htmlFor="service"
-          className="block text-sm font-medium text-gray-700 mb-1"
-        >
-          Service Needed *
-        </label>
-        <select
-          id="service"
-          name="service"
-          required
-          value={formData.service}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kworld-primary"
-        >
-          <option value="">Select a service</option>
-          <option value="data-recovery">Data Recovery</option>
-          <option value="cybersecurity">Cybersecurity Solutions</option>
-          <option value="digital-forensic">Digital Forensic Analysis</option>
-          <option value="it-support">IT Support & Networking</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-
-      <div>
-        <label
-          htmlFor="message"
-          className="block text-sm font-medium text-gray-700 mb-1"
-        >
-          Message
-        </label>
-        <textarea
-          id="message"
+        <TextareaField
+          label="Message"
           name="message"
-          rows={4}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kworld-primary"
-        ></textarea>
-      </div>
-
-      <Button
-        type="submit"
-        className="w-full bg-kworld-primary hover:bg-kworld-primary/90 text-white py-3"
-        disabled={loading}
-      >
-        {loading ? "Sending..." : "Get a Free Quote"}
-      </Button>
-    </form>
+          required
+          rows={4}
+          placeholder="Write your message..."
+        />
+        <button
+          type="submit"
+          className={[
+            "w-fit rounded-full px-10 py-4 text-lg font-semibold text-white transition duration-300",
+            "bg-gradient-to-r from-[#007BFF] to-[#00C6FF] hover:from-[#005FCC] hover:to-[#00A4CC]",
+            "disabled:opacity-60 disabled:cursor-not-allowed",
+          ].join(" ")}
+          disabled={loading}
+        >
+          {loading ? "Sending..." : "Let's Fix your Problem!"}
+        </button>
+      </form>
+    </div>
   );
 };
 
