@@ -58,7 +58,7 @@ const HeroSection = () => {
       </div>
 
       {/* Foreground Content */}
-      <div className="relative z-10 px-4 text-center max-w-5xl -mt-[10%]">
+      <div className="relative z-10 px-4 text-center max-w-5xl -mt-[10%] lg:mt-0">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -72,16 +72,16 @@ const HeroSection = () => {
               className="uppercase tracking-widest text-sm sm:text-base text-[#00C6FF] font-semibold mb-3 px-10"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
             >
               RELIABILITY ENGINEERED INTO EVERY BYTE
             </motion.p>
 
             <motion.h1
-              className="text-[42px] md:text-6xl lg:text-7xl xl:text-[82px] 2xl:text-8xl font-bold leading-tight drop-shadow-xl"
+              className="text-[42px] md:text-6xl lg:text-7xl xl:text-[90px] 2xl:text-8xl font-bold leading-tight drop-shadow-xl"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
             >
               {title}
             </motion.h1>
