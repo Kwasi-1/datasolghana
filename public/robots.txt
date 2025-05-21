@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://datasolghana.vercel.app/
+
+# Sitemaps
+Sitemap: https://datasolghana.vercel.app/sitemap.xml
