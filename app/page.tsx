@@ -9,10 +9,14 @@ import ImpactSection from "@/components/landing/Impact";
 import Services from "@/components/landing/Services";
 // import TestimonialSection from "@/components/landing/TestimonialSection";
 import CallToAction from "@/components/shared/CalltoACtion";
+import TopBanner from "@/components/shared/TopBanner";
+import Navbar from "@/components/Navbar";
 
 function Landing() {
   return (
     <div className="min-h-screen">
+      <TopBanner />
+      <Navbar />
       <HeroSection />
       <About />
       <Services />

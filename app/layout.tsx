@@ -3,11 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import BackToTopButton from "@/components/shared/BackToTopButton";
-import TopBanner from "@/components/shared/TopBanner";
 
 // Font setup
 const geistSans = Geist({
@@ -73,8 +71,6 @@ export default function RootLayout({
         <TooltipProvider>
           <div>
             <Sonner />
-            <TopBanner />
-            <Navbar />
             {children}
             <Footer />
             {/* <WhatsAppButton /> */}
