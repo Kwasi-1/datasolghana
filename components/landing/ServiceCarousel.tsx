@@ -12,27 +12,27 @@ const icon = "/assets/future-plan.png";
 const services = [
   {
     title: "Data Recovery",
-    text: "Recover lost or corrupted files from hard drives, SSDs, RAID systems, and mobile devices. Our specialists handle critical data loss with forensic precision.",
+    text: "We recover lost files from hard drives, SSDs, and mobile devices. Whether it’s a logical or physical failure, we ensure safe and secure data retrieval.",
     icon: icon,
   },
   {
-    title: "Cybersecurity",
-    text: "Defend your digital assets with 24/7 threat monitoring, vulnerability assessments, and proactive security hardening tailored to your environment.",
+    title: "Cyber Security",
+    text: "Protect your business from cyber threats with our advanced threat detection, malware protection, and firewall solutions.",
     icon: icon,
   },
   {
-    title: "Network Security & Architecture",
-    text: "Design and secure networks built for performance and resilience. We provide firewall configuration, intrusion prevention, and secure VPN deployments.",
+    title: "IT Consulting",
+    text: "Get expert guidance on your IT infrastructure, project planning, software solutions, and digital transformation strategies.",
     icon: icon,
   },
   {
-    title: "Incident Response",
-    text: "Fast, coordinated response to cyber threats. From ransomware containment to breach analysis, we minimize downtime and protect your reputation.",
+    title: "Networking",
+    text: "We design, implement, and maintain robust wired and wireless network solutions for organizations of all sizes.",
     icon: icon,
   },
   {
-    title: "Managed IT & Support",
-    text: "End-to-end IT support for businesses. From system maintenance to remote monitoring, we ensure smooth, secure, and reliable operations.",
+    title: "Training & Support",
+    text: "Empower your team with professional IT training and get continuous technical support to keep systems running smoothly.",
     icon: icon,
   },
 ];
@@ -112,12 +112,15 @@ export default function ServiceCarousel() {
                 <p className="text-gray-600 text-lg line-clamp-2">
                   {service.text}
                 </p>
-                <div className="absolute bottom-5 sm:right-10 right-5 flex items-center justify-end bg-[#272729] rounded-full p-2 text-white mt-2">
+                <a
+                  href="/#contact"
+                  className="absolute bottom-5 sm:right-10 right-5 flex items-center justify-end bg-[#272729] rounded-full p-2 text-white mt-2"
+                >
                   <Icon
                     icon="weui:arrow-filled"
                     className="w-6 h-6 font-bold"
                   />
-                </div>
+                </a>
               </div>
             </div>
           ))}
