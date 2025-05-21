@@ -6,19 +6,19 @@ import Link from "next/link";
 
 const slides = [
   {
-    image: "/assets/hero.jpg",
+    image: "/assets/hero-1.jpg",
     title: "Recover What Matters",
     description:
       "We help restore lost files and critical data with expert data recovery solutions.",
   },
   {
-    image: "/assets/hero-1.jpg",
+    image: "/assets/hero-2.jpg",
     title: "Fortify Your Business",
     description:
       "Get top-tier backup & cyber security solutions to protect against modern threats.",
   },
   {
-    image: "/assets/hero-2.jpg",
+    image: "/assets/hero-3.jpg",
     title: "Expert IT Support & Consulting",
     description:
       "From upgrades to consulting, our support keeps your business running smoothly.",
