@@ -28,10 +28,12 @@ export const metadata: Metadata = {
   applicationName: "DataSOL Technologies",
   keywords: [
     "data recovery",
+    "data recovery ghana",
     "cybersecurity",
     "IT support",
     "digital forensics",
     "DataSOL",
+    "datasol",
     "DataSOL Technologies",
     "data recovery services",
   ],
