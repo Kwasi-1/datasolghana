@@ -12,6 +12,14 @@ function Services() {
           </h1>
         </div>
         <ServiceCarousel />
+        <div className="mt-10 flex justify-center">
+          <a
+            href="#contact"
+            className="text-white border border-white px-6 py-3 rounded-full hover:bg-white hover:text-[#225EA6] transition duration-300"
+          >
+            Explore Our Full Services
+          </a>
+        </div>
       </div>
     </div>
   );
