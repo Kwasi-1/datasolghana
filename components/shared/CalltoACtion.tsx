@@ -3,14 +3,14 @@ import { Icon } from "@iconify/react";
 export default function CallToAction() {
   return (
     <div>
-      <div className="max-w-6xl mx-auto px-6 mb-10">
+      <div className="max-w-6xl mx-auto px-4 mb-10">
         <div className="bg-[#225EA6] rounded-2xl py-10 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between text-center md:text-left relative overflow-hidden space-y-6 md:space-y-0">
           <div>
-            <h2 className="text-3xl md:text-4xl font-semibold text-white capitalize">
-              Lost data? System under attack?
-            </h2>
+            <h3 className="text-2xl md:text-3xl font-semibold text-white capitalize">
+              Need immediate assistance?
+            </h3>
             <p className="text-white text-sm md:text-base mt-3 opacity-90">
-              Talk to a recovery expert. Fast response. 100% confidential.
+              Our experts are here to help you 24/7.
             </p>
           </div>
 
