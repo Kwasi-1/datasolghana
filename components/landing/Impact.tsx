@@ -26,7 +26,7 @@ export default function ImpactSection() {
             Securing Data. Defending Systems. Restoring Peace of Mind.
           </h2>
 
-          <p className="text-xl lg:text-2xl leading-[180%] font-[300] text-gray-700">
+          <p className="text-lg md:text-xl lg:text-2xl leading-[180%] font-[300] text-gray-700">
             From recovering critical business data to fortifying entire IT
             infrastructures, we’ve become a trusted partner in digital
             resilience. Our cybersecurity and data recovery solutions have
