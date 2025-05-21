@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 export default function ContactUs() {
   return (
     <section id="contact" className="bg-gray-50 py-20 md:py-24">
-      <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
+      <div className="max-w-7xl mx-auto px-6 2xl:px-24">
         <div className="grid grid-cols-1 md:grid-cols-3 text-center">
           {/* Office Info */}
           <div className="flex flex-col px-10 items-center space-y-4 md:border-r border-black/70 pb-10 md:pb-0">
