@@ -4,36 +4,53 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
-const images = ["/assets/hero.jpg", "/assets/hero-2.jpg", "/assets/hero-3.jpg"];
+const slides = [
+  {
+    image: "/assets/hero.jpg",
+    title: "Recover What Matters",
+    description:
+      "We help restore lost files and critical data with expert data recovery solutions.",
+  },
+  {
+    image: "/assets/hero-1.jpg",
+    title: "Fortify Your Business",
+    description:
+      "Get top-tier backup & cyber security solutions to protect against modern threats.",
+  },
+  {
+    image: "/assets/hero-2.jpg",
+    title: "Expert IT Support & Consulting",
+    description:
+      "From upgrades to consulting, our support keeps your business running smoothly.",
+  },
+];
 
 const HeroSection = () => {
-  const [currentImage, setCurrentImage] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
+      setCurrentIndex((prev) => (prev + 1) % slides.length);
     }, 10000);
     return () => clearInterval(interval);
   }, []);
 
+  const { image, title, description } = slides[currentIndex];
+
   return (
     <section
       id="herosection"
-      className="relative h-screen max-h-[700px] flex items-center justify-center text-white select-none overflow-hidden"
+      className="relative h-[90vh] md:max-h-[700px] flex items-center justify-center text-white select-none overflow-hidden"
     >
-      {/* Image Slider with Gradient Overlay */}
-      <div
-        className="absolute inset-0 z-0"
-        role="img"
-        aria-label="Background slideshow"
-      >
-        {images.map((src, index) => (
+      {/* Background Image Slider */}
+      <div className="absolute inset-0 z-0">
+        {slides.map((slide, index) => (
           <motion.div
             key={index}
             className="absolute inset-0 bg-cover bg-center w-full h-full"
-            style={{ backgroundImage: `url(${src})` }}
+            style={{ backgroundImage: `url(${slide.image})` }}
             initial={{ opacity: 0 }}
-            animate={{ opacity: index === currentImage ? 1 : 0 }}
+            animate={{ opacity: index === currentIndex ? 1 : 0 }}
             transition={{ duration: 1 }}
           />
         ))}
@@ -44,7 +61,7 @@ const HeroSection = () => {
       <div className="relative z-10 px-4 text-center max-w-3xl">
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentImage}
+            key={currentIndex}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -56,8 +73,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              Rapid Recovery. <br className="hidden md:block" /> Relentless
-              Protection.
+              {title}
             </motion.h1>
 
             <motion.p
@@ -66,15 +82,14 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
             >
-              We recover lost files, secure hacked systems, and prevent future
-              breaches.
+              {description}
             </motion.p>
 
             <motion.div
               className="mt-6"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.6 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
             >
               <Link
                 href="/contact"

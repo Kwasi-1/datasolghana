@@ -3,9 +3,9 @@ import Image from "next/image";
 const About = () => {
   return (
     <section id="about" className="bg-white py-20">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col-reverse md:flex-row items-center gap-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col lg:flex-row items-center gap-y-8 gap-x-16">
         {/* Left Text Section */}
-        <div className="w-full md:w-1/2">
+        <div className="w-full lg:w-1/2">
           <p className="text-sm uppercase text-[#007BFF] font-[400] mb-2">
             The Datasol Advantage
           </p>
@@ -45,7 +45,15 @@ const About = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="relative w-full h-fit md:w-1/2">
+        <div className="relative w-full md:mt-6 lg:mt-0 h-fit lg:w-1/2">
+          {/* Badge Overlay */}
+          <div className="md:absolute mx-auto  mb-6 md:mb-0 -top-10 -left-10 bg-[#EAF6FF] text-center rounded-full border-2 border-[#007BFF] w-36 h-36 flex flex-col items-center justify-center shadow-md z-20">
+            <span className="text-2xl font-bold text-[#007BFF]">16+</span>
+            <span className="text-xs font-semibold uppercase text-[#102B5F] mt-1 text-center">
+              Years <br /> Securing Data
+            </span>
+          </div>
+
           <div className="relative rounded-3xl overflow-hidden shadow-lg">
             {/* Blue Overlay */}
             <div className="absolute inset-0 bg-[#007BFF] opacity-30 z-10 rounded-3xl pointer-events-none" />
@@ -56,14 +64,6 @@ const About = () => {
               height={400}
               className="w-full h-fit object-cover relative z-0"
             />
-          </div>
-
-          {/* Badge Overlay */}
-          <div className="absolute -top-10 -left-10 bg-[#EAF6FF] text-center rounded-full border-2 border-[#007BFF] w-36 h-36 flex flex-col items-center justify-center shadow-md z-20">
-            <span className="text-2xl font-bold text-[#007BFF]">16+</span>
-            <span className="text-xs font-semibold uppercase text-[#102B5F] mt-1 text-center">
-              Years <br /> Securing Data
-            </span>
           </div>
 
           {/* Operating since badge */}
