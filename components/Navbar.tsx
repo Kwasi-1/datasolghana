@@ -68,7 +68,10 @@ const Navbar: React.FC = () => {
               <SheetTrigger>
                 <Menu className="h-7 w-7 " />
               </SheetTrigger>
-              <SheetContent side="left" className="w-1/2 min-w-64 p-6 bg-white">
+              <SheetContent
+                side="left"
+                className="w-1/2 min-w-64 p-6 bg-white data-[state=open]:animate-slide-in-left"
+              >
                 <div className="mb-4">
                   <Image
                     src={logo}
