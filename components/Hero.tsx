@@ -40,7 +40,7 @@ const HeroSection = () => {
   return (
     <section
       id="herosection"
-      className="relative h-[90vh] md:max-h-[700px] flex items-center justify-center text-white select-none overflow-hidden"
+      className="relative h-screen max-h-[900px] flex items-center justify-center text-white select-none overflow-hidden"
     >
       {/* Background Image Slider */}
       <div className="absolute inset-0 z-0">
@@ -54,11 +54,11 @@ const HeroSection = () => {
             transition={{ duration: 1 }}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B2545]/90 via-[#0B2545]/70 to-[#0B2545]/10 " />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B2545]/90 via-[#0B2545]/70 md:to-[#0B2545]/10 to-[#0B2545]/30 " />
       </div>
 
       {/* Foreground Content */}
-      <div className="relative z-10 px-4 text-center max-w-3xl">
+      <div className="relative z-10 px-4 text-center max-w-5xl -mt-[10%]">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -67,8 +67,18 @@ const HeroSection = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Motto */}
+            <motion.p
+              className="uppercase tracking-widest text-sm sm:text-base text-[#00C6FF] font-semibold mb-3 px-10"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              RELIABILITY ENGINEERED INTO EVERY BYTE
+            </motion.p>
+
             <motion.h1
-              className="text-[42px] md:text-6xl lg:text-7xl font-bold leading-tight drop-shadow-xl"
+              className="text-[42px] md:text-6xl lg:text-7xl xl:text-[82px] 2xl:text-8xl font-bold leading-tight drop-shadow-xl"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
@@ -77,7 +87,7 @@ const HeroSection = () => {
             </motion.h1>
 
             <motion.p
-              className="mt-4 text-lg sm:text-xl text-gray-200 max-w-xl mx-auto"
+              className="mt-4 text-xl sm:text-2xl text-gray-200 max-w-xl mx-auto"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
