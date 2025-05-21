@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react/dist/iconify.js";
 import { Mail, MapPin, MessageSquare } from "lucide-react";
 
 const TopBanner = () => {
@@ -11,7 +12,10 @@ const TopBanner = () => {
             href="mailto:datasoln@outlook.com"
             className="flex items-center gap-1 hover:text-[#007BFF] transition cursor-pointer"
           >
-            <Mail size={16} />
+            <Icon
+              icon={`streamline:mail-send-email-message`}
+              className="h-4 w-4"
+            />
             <span>datasoln@outlook.com</span>
           </a>
 
@@ -22,7 +26,7 @@ const TopBanner = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-1 hover:text-[#007BFF] transition cursor-pointer"
           >
-            <MapPin size={16} />
+            <Icon icon={`ion:location-sharp`} className="h-5 w-5" />
             <span>Adenta Shopping Mall, Adenta, Ghana</span>
           </a>
         </div>
@@ -34,7 +38,7 @@ const TopBanner = () => {
           rel="noopener noreferrer"
           className="flex items-center gap-1 hover:text-[#007BFF] transition cursor-pointer"
         >
-          <MessageSquare size={16} />
+          <Icon icon={`bi:chat-dots`} className="h-5 w-5" />
           <span>Let’s Chat: +233 200 063564</span>
         </a>
       </div>
