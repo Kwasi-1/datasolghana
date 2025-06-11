@@ -164,7 +164,7 @@ const ContactForm: React.FC = () => {
           type="submit"
           className={[
             "w-fit rounded-full px-10 py-4 text-lg font-semibold text-white transition duration-300",
-            "bg-gradient-to-r from-[#007BFF] to-[#00C6FF] hover:from-[#005FCC] hover:to-[#00A4CC]",
+            "bg-gradient-to-r from-[#007BFF] to-[#007BFF] hover:from-[#005FCC] hover:to-[#005FCC]",
             "disabled:opacity-60 disabled:cursor-not-allowed",
           ].join(" ")}
           disabled={loading}
