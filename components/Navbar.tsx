@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
               />
             </Link>
           </div>
-          
+
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8 text-base font-normal">
             {navLinks.map((link) => (
@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
               </a>
             ))}
           </nav>
-          
+
           <div className="hidden lg:flex items-center space-x-8">
             <a
               href="/#contact"
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
               Get a repair now
             </a>
           </div>
-          
+
           {/* Mobile menu */}
           <div className="lg:hidden">
             <Sheet>
@@ -98,18 +98,18 @@ const Navbar: React.FC = () => {
                 <nav className="flex flex-col space-y-4 text-gray-700 font-medium">
                   {navLinks.map((link, index) => (
                     <SheetClose asChild key={link.label}>
-                      <a
+                      <Link
                         href={link.href}
                         className="transition-all duration-300 hover:text-accent/50 font-light 
                           animate-fade-in-up hover:translate-x-2 hover:bg-gray-50 
                           px-3 py-2 rounded-md"
                         style={{
                           animationDelay: `${(index + 1) * 100}ms`,
-                          animationFillMode: 'both'
+                          animationFillMode: "both",
                         }}
                       >
                         {link.label}
-                      </a>
+                      </Link>
                     </SheetClose>
                   ))}
                 </nav>
