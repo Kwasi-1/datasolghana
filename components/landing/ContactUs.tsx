@@ -20,9 +20,14 @@ export default function ContactUs() {
             <h3 className="text-xl font-[500] text-[#102B5F]">
               Visit Our Office
             </h3>
-            <p className="text-gray-700 max-w-xs">
-              23 1st Freetown Link, Okponglo, Accra, Ghana
-            </p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Adenta+Shopping+Mall,+Adenta,+Ghana"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 max-w-xs hover:text-[#007BFF] transition duration-300 cursor-pointer"
+            >
+              Adenta Shopping Mall, Adenta, Ghana
+            </a>
           </div>
 
           {/* Call Info */}
@@ -38,9 +43,14 @@ export default function ContactUs() {
             <h3 className="text-xl font-[500] text-[#102B5F]">
               Have any issues?
             </h3>
-            <div className="text-2xl font-bold space-y-1 hover:text-[#007BFF] cursor-pointer transistion duration-300">
-              +233 302 421429
-            </div>
+            <a
+              href="https://wa.me/233200063564?text=Hello%20Datasoln,%20I%20need%20assistance."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl font-bold space-y-1 hover:text-[#007BFF] cursor-pointer transistion duration-300"
+            >
+              +233 200 063564
+            </a>
           </div>
 
           {/* Working Hours */}
@@ -55,7 +65,12 @@ export default function ContactUs() {
             </div>
             <h3 className="text-xl font-[500] text-[#102B5F]">Email address</h3>
             <div className="text-gray-700 space-y-1">
-              <p>info@datasol.dev</p>
+              <a
+                href="mailto:datasoln@outlook.com"
+                className="hover:text-[#007BFF] transistion duration-300"
+              >
+                datasoln@outlook.com
+              </a>
             </div>
           </div>
         </div>

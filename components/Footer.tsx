@@ -12,8 +12,14 @@ const socialLinks = [
     icon: "ri:facebook-fill",
     href: "https://www.facebook.com/profile.php?id=61573550787990",
   },
-  { icon: "ri:twitter-fill", href: "#" },
-  { icon: "ri:linkedin-box-fill", href: "#" },
+  {
+    icon: "ri:twitter-fill",
+    href: "https://www.facebook.com/profile.php?id=61573550787990",
+  },
+  {
+    icon: "ri:linkedin-box-fill",
+    href: "https://www.facebook.com/profile.php?id=61573550787990",
+  },
 ];
 
 export default function Footer() {
@@ -32,13 +38,35 @@ export default function Footer() {
         {/* Contact Info */}
         <div className="flex flex-col gap-4 text-[15px] col-span-1 lg:col-span-2 sm:text-base lg:text-lg leading-[150%] font-[300]">
           <div>
-            <p>datasoln@outlook.com</p>
+            <a
+              href="mailto:datasoln@outlook.com"
+              className="hover:text-[#007BFF] transistion duration-300"
+            >
+              datasoln@outlook.com
+            </a>
             <p>www.datasolghana.net</p>
           </div>
           <div>
-            <p>Address: Adenta Shopping Mall, Adenta, Ghana</p>
+            <p>
+              Address:{" "}
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Adenta+Shopping+Mall,+Adenta,+Ghana"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#007BFF] transition duration-300 cursor-pointer"
+              >
+                Adenta Shopping Mall, Adenta, Ghana
+              </a>
+            </p>
           </div>
-          <div>+233 200 063 564</div>
+          <a
+            href="https://wa.me/233200063564?text=Hello%20Datasoln,%20I%20need%20assistance."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#007BFF] cursor-pointer transistion duration-300"
+          >
+            +233 200 063564
+          </a>
         </div>
 
         {/* Quick Links */}
