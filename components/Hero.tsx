@@ -43,7 +43,7 @@ const HeroSection = () => {
       className="relative h-[calc(100vh-80px)]  max-h-[900px] flex items-center justify-center text-white select-none overflow-hidden"
     >
       {/* Background Image Slider */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-black">
         {slides.map((slide, index) => (
           <motion.div
             key={index}
