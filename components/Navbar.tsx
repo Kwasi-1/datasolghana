@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
@@ -51,7 +50,7 @@ const Navbar: React.FC = () => {
               />
             </Link>
           </div>
-
+          
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8 text-base font-normal">
             {navLinks.map((link) => (
@@ -64,7 +63,7 @@ const Navbar: React.FC = () => {
               </a>
             ))}
           </nav>
-
+          
           <div className="hidden lg:flex items-center space-x-8">
             <a
               href="/#contact"
@@ -73,18 +72,21 @@ const Navbar: React.FC = () => {
               Get a repair now
             </a>
           </div>
-
+          
           {/* Mobile menu */}
           <div className="lg:hidden">
             <Sheet>
-              <SheetTrigger>
+              <SheetTrigger className="transition-transform duration-200 hover:scale-110">
                 <Menu className="h-7 w-7" />
               </SheetTrigger>
               <SheetContent
                 side="left"
-                className="w-1/2 min-w-64 p-6 bg-white data-[state=open]:animate-slide-in-left"
+                className="w-1/2 min-w-64 p-6 bg-white 
+                  data-[state=open]:animate-sheet-slide-in-left 
+                  data-[state=closed]:animate-sheet-slide-out-left
+                  transition-transform duration-300 ease-in-out"
               >
-                <div className="mb-4">
+                <div className="mb-4 animate-fade-in-up">
                   <Image
                     src={logo}
                     alt="datasol Logo"
@@ -94,11 +96,17 @@ const Navbar: React.FC = () => {
                   />
                 </div>
                 <nav className="flex flex-col space-y-4 text-gray-700 font-medium">
-                  {navLinks.map((link) => (
+                  {navLinks.map((link, index) => (
                     <SheetClose asChild key={link.label}>
                       <a
                         href={link.href}
-                        className="transition-colors duration-300 hover:text-accent/50 font-light"
+                        className="transition-all duration-300 hover:text-accent/50 font-light 
+                          animate-fade-in-up hover:translate-x-2 hover:bg-gray-50 
+                          px-3 py-2 rounded-md"
+                        style={{
+                          animationDelay: `${(index + 1) * 100}ms`,
+                          animationFillMode: 'both'
+                        }}
                       >
                         {link.label}
                       </a>
