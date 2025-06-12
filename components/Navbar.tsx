@@ -1,9 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import {
@@ -17,15 +16,28 @@ export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/#about" },
   { label: "Services", href: "/#services" },
-  { label: "Products", href: "/#products" },
+  { label: "Testimonials", href: "/#testimonials" },
   { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const logo = "/assets/Datasol_logo.png";
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="bg-white shadow-sm md:sticky top-0 z-50">
+    <nav
+      className={`bg-white shadow-sm md:sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? "animate-navbar-slide" : ""
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-25 py-4">
           <div className="flex items-center">
@@ -46,7 +58,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className={`hover:text-kworld-accent text-lg transition duration-300`}
+                className="hover:text-kworld-accent text-lg transition duration-300"
               >
                 {link.label}
               </a>
@@ -62,11 +74,11 @@ const Navbar: React.FC = () => {
             </a>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu */}
           <div className="lg:hidden">
             <Sheet>
               <SheetTrigger>
-                <Menu className="h-7 w-7 " />
+                <Menu className="h-7 w-7" />
               </SheetTrigger>
               <SheetContent
                 side="left"
@@ -86,7 +98,7 @@ const Navbar: React.FC = () => {
                     <SheetClose asChild key={link.label}>
                       <a
                         href={link.href}
-                        className={`transition-colors duration-300 hover:text-accent/50 font-light `}
+                        className="transition-colors duration-300 hover:text-accent/50 font-light"
                       >
                         {link.label}
                       </a>
