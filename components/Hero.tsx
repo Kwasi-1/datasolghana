@@ -40,7 +40,7 @@ const HeroSection = () => {
   return (
     <section
       id="herosection"
-      className="relative h-screen max-h-[900px] flex items-center justify-center text-white select-none overflow-hidden"
+      className="relative h-[calc(100vh-80px)]  max-h-[900px] flex items-center justify-center text-white select-none overflow-hidden"
     >
       {/* Background Image Slider */}
       <div className="absolute inset-0 z-0">
