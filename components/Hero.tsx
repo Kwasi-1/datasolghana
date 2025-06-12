@@ -102,7 +102,7 @@ const HeroSection = () => {
               transition={{ delay: 0.5, duration: 0.6 }}
             >
               <Link
-                href="/contact"
+                href="/#contact"
                 className="inline-flex items-center gap-2 bg-[#225EA6] text-white px-6 py-3 text-lg font-medium rounded-lg hover:bg-[#1E4F8C] transition duration-300"
               >
                 Get Help Now <span>→</span>
