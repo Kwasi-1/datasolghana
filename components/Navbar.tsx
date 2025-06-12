@@ -103,7 +103,7 @@ const Navbar: React.FC = () => {
                   {navLinks.map((link, index) => (
                     // <SheetClose asChild key={link.label}>
 
-                    <Link
+                    <a
                       href={link.href}
                       key={link.label}
                       // onClick={() => setIsSheetOpen(false)}
@@ -116,7 +116,7 @@ const Navbar: React.FC = () => {
                       }}
                     >
                       {link.label}
-                    </Link>
+                    </a>
                     // </SheetClose>
                   ))}
                 </nav>
