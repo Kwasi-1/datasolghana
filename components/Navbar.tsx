@@ -21,6 +21,7 @@ export const navLinks = [
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
   const logo = "/assets/Datasol_logo.png";
 
   useEffect(() => {
@@ -75,8 +76,11 @@ const Navbar: React.FC = () => {
 
           {/* Mobile menu */}
           <div className="lg:hidden">
-            <Sheet>
-              <SheetTrigger className="transition-transform duration-200 hover:scale-110">
+            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+              <SheetTrigger
+                className="transition-transform duration-200 hover:scale-110"
+                onClick={() => setIsSheetOpen(true)}
+              >
                 <Menu className="h-7 w-7" />
               </SheetTrigger>
               <SheetContent
@@ -97,20 +101,23 @@ const Navbar: React.FC = () => {
                 </div>
                 <nav className="flex flex-col space-y-4 text-gray-700 font-medium">
                   {navLinks.map((link, index) => (
-                    <SheetClose asChild key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="transition-all duration-300 hover:text-accent/50 font-light 
+                    // <SheetClose asChild key={link.label}>
+
+                    <Link
+                      href={link.href}
+                      key={link.label}
+                      onClick={() => setIsSheetOpen(false)}
+                      className="transition-all duration-300 hover:text-accent/50 font-light 
                           animate-fade-in-up hover:translate-x-2 hover:bg-gray-50 
                           px-3 py-2 rounded-md"
-                        style={{
-                          animationDelay: `${(index + 1) * 100}ms`,
-                          animationFillMode: "both",
-                        }}
-                      >
-                        {link.label}
-                      </Link>
-                    </SheetClose>
+                      style={{
+                        animationDelay: `${(index + 1) * 100}ms`,
+                        animationFillMode: "both",
+                      }}
+                    >
+                      {link.label}
+                    </Link>
+                    // </SheetClose>
                   ))}
                 </nav>
               </SheetContent>
