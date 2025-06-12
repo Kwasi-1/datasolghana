@@ -106,7 +106,17 @@ const Navbar: React.FC = () => {
                     <Link
                       href={link.href}
                       key={link.label}
-                      onClick={() => setIsSheetOpen(false)}
+                      onClick={(e) => {
+                        const href = (
+                          e.currentTarget as HTMLAnchorElement
+                        ).getAttribute("href");
+                        if (href?.startsWith("#")) {
+                          // delay closing so scroll happens first
+                          setTimeout(() => setIsSheetOpen(false), 300);
+                        } else {
+                          setIsSheetOpen(false);
+                        }
+                      }}
                       className="transition-all duration-300 hover:text-accent/50 font-light 
                           animate-fade-in-up hover:translate-x-2 hover:bg-gray-50 
                           px-3 py-2 rounded-md"
