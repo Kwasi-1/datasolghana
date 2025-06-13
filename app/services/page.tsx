@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import TopBanner from "@/components/shared/TopBanner";
+import Navbar from "@/components/Navbar";
 
 interface ServiceItemProps {
   id: string;
@@ -153,6 +155,8 @@ const ServicesPage: React.FC = () => {
   return (
     <div>
       {/* Services Hero */}
+      <TopBanner />
+      <Navbar />
       <section className="relative py-24">
         <div className="absolute inset-0 bg-gradient-to-r from-kworld-primary to-kworld-secondary z-10"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
@@ -177,7 +181,7 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Services Navigation */}
-      <section className="bg-white shadow-md sticky top-[80px] z-40">
+      <section className="bg-white shadow-md sticky top-[110px] z-40">
         <div className="max-w-7xl mx-auto px-4 py-4 overflow-x-auto">
           <div className="flex space-x-8 min-w-max">
             <a

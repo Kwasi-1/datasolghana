@@ -12,6 +12,8 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import FAQHero from "@/components/faq/FAQHero";
 import { faqData } from "@/components/faq/faqData";
+import TopBanner from "@/components/shared/TopBanner";
+import Navbar from "@/components/Navbar";
 
 const FAQPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>("all");
@@ -27,6 +29,8 @@ const FAQPage: React.FC = () => {
 
   return (
     <div>
+      <TopBanner />
+      <Navbar />
       {/* FAQ Hero Section */}
       <FAQHero />
 

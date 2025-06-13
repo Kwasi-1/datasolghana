@@ -4,6 +4,8 @@ import React, { useEffect } from "react";
 import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
+import TopBanner from "@/components/shared/TopBanner";
+import Navbar from "@/components/Navbar";
 
 const ContactPage: React.FC = () => {
   useEffect(() => {
@@ -12,6 +14,8 @@ const ContactPage: React.FC = () => {
 
   return (
     <div>
+      <TopBanner />
+      <Navbar />
       {/* Contact Hero */}
       <section className="bg-gradient-to-r from-kworld-primary to-kworld-secondary text-white py-16">
         <div className="section-padding text-center">
@@ -27,10 +31,7 @@ const ContactPage: React.FC = () => {
       <section className="section-padding">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form Section */}
-          <div className="bg-white p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-6 text-kworld-primary">
-              Send Us a Message
-            </h2>
+          <div className=" -p-8 -mt-10">
             <ContactForm />
           </div>
 
