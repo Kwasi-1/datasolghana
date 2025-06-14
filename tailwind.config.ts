@@ -140,16 +140,16 @@ module.exports = {
             opacity: '1',
           },
         },
-        'sheet-slide-out-left': {
-          '0%': {
-            transform: 'translateX(0)',
-            opacity: '1',
-          },
-          '100%': {
-            transform: 'translateX(-100%)',
-            opacity: '1',
-          },
-        },
+        // 'sheet-slide-out-left': {
+        //   '0%': {
+        //     transform: 'translateX(0)',
+        //     opacity: '1',
+        //   },
+        //   '100%': {
+        //     transform: 'translateX(-100%)',
+        //     opacity: '1',
+        //   },
+        // },
         'fade-in-up': {
           '0%': {
             opacity: '0',
@@ -178,7 +178,7 @@ module.exports = {
         "slide-out-left": "slide-in-left 0.3s ease-out reverse",
         // 'navbar-slide': 'navbarSlide 0.3s ease-out',
 				'sheet-slide-in-left': 'sheet-slide-in-left 0.3s ease-out forwards',
-        'sheet-slide-out-left': 'sheet-slide-out-left 0.3s ease-in forwards',
+        // 'sheet-slide-out-left': 'sheet-slide-out-left 0.3s ease-in forwards',
         'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
         'navbar-slide': 'navbar-slide 0.3s ease-out forwards',
       },
