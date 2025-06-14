@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://datasolghana.vercel.app/
+Host: https://datasolghana.net/
 
 # Sitemaps
-Sitemap: https://datasolghana.vercel.app/sitemap.xml
+Sitemap: https://datasolghana.net/sitemap.xml
