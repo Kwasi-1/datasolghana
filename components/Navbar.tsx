@@ -21,7 +21,7 @@ export const navLinks = [
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  // const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
   const logo = "/assets/Datasol_logo.png";
 
   useEffect(() => {
@@ -76,10 +76,13 @@ const Navbar: React.FC = () => {
 
           {/* Mobile menu */}
           <div className="lg:hidden">
-            <Sheet>
+            <Sheet
+              open={isSheetOpen}
+              onOpenChange={(open) => setIsSheetOpen(open)}
+            >
               <SheetTrigger
                 className="transition-transform duration-200 hover:scale-110"
-                // onClick={() => setIsSheetOpen(true)}
+                onClick={() => setIsSheetOpen(true)}
               >
                 <Menu className="h-7 w-7" />
               </SheetTrigger>
@@ -106,7 +109,7 @@ const Navbar: React.FC = () => {
                     <a
                       href={link.href}
                       key={link.label}
-                      // onClick={() => setIsSheetOpen(false)}
+                      onClick={() => setIsSheetOpen(false)}
                       className="transition-all duration-300 hover:text-accent/50 font-light 
                           animate-fade-in-up hover:translate-x-2 hover:bg-gray-50 
                           px-3 py-2 rounded-md"
