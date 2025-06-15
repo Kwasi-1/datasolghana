@@ -21,8 +21,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
     <div className="relative bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-xl hover:shadow-kworld-primary/5 transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
       {/* Quote Icon */}
       <div className="absolute -top-4 left-8">
-        <div className="w-8 h-8 bg-kworld-primary rounded-full flex items-center justify-center">
-          <Quote size={16} className="text-white" />
+        <div className="w-9 h-9 bg-kworld-primary/90 rounded-full flex items-center justify-center">
+          <Quote size={19} className="text-white" />
         </div>
       </div>
 
@@ -40,7 +40,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       </div>
 
       {/* Quote */}
-      <blockquote className="text-gray-700 text-lg leading-relaxed mb-8 flex-grow font-medium">
+      <blockquote className="text-gray-700 md:text-lg leading-relaxed mb-8 flex-grow font-[400]">
         "{quote}"
       </blockquote>
 
@@ -58,7 +58,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           </div>
         )}
         <div>
-          <p className="font-bold text-gray-900 text-lg">{name}</p>
+          <p className="font-[600] text-gray-900 text-lg">{name}</p>
           <p className="text-kworld-primary text-sm font-medium">{company}</p>
         </div>
       </div>
