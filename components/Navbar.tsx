@@ -106,11 +106,11 @@ const Navbar: React.FC = () => {
                   {navLinks.map((link, index) => (
                     // <SheetClose asChild key={link.label}>
 
-                    <a
+                    <Link
                       href={link.href}
                       key={link.label}
                       onClick={() => setIsSheetOpen(false)}
-                      className="transition-all duration-300 hover:text-accent/50 font-light 
+                      className="transition-all duration-300 font-light 
                           animate-fade-in-up hover:translate-x-2 hover:bg-gray-50 
                           px-3 py-2 rounded-md"
                       style={{
@@ -119,7 +119,7 @@ const Navbar: React.FC = () => {
                       }}
                     >
                       {link.label}
-                    </a>
+                    </Link>
                     // </SheetClose>
                   ))}
                 </nav>
