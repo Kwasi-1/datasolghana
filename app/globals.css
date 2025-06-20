@@ -191,8 +191,12 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 0rem;
+  scroll-padding-top: 4.5rem;
 }
+
+/* .sheet-content * {
+  touch-action: manipulation;
+} */
 
 @media (min-width: 768px) {
   html {

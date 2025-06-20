@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`bg-white shadow-sm md:sticky top-0 z-50 transition-all duration-300 ${
+      className={`bg-white shadow-sm sticky top-0 z-50 transition-all duration-300 ${
         isScrolled ? "animate-navbar-slide" : ""
       }`}
     >
