@@ -22,11 +22,11 @@ export default function ImpactSection() {
     >
       <div className="max-w-7xl lg:mx-auto space-y-6 md:mx-16">
         <div className="flex flex-col items-start sm:items-center gap-6 sm:gap-8 lg:gap-12 w-full sm:text-center text-left lg:w-[80%] mx-auto">
-          <h2 className="text-3xl sm:text-[2rem] lg:text-[2.5rem] font-[600] text-gray-900 leading-[110%]">
+          <h2 className="text-3xl sm:text-[2rem] lg:text-[2.5rem] font-[600] text-gray-900 leading-[120%] sm:leading-[120%] lg:leading-[120%]">
             Securing Data. Defending Systems. Restoring Peace of Mind.
           </h2>
 
-          <p className="text-lg md:text-xl lg:text-2xl leading-[180%] font-[300] text-gray-700">
+          <p className="text-lg md:text-xl lg:text-2xl leading-[180%] font-gordita font-[400] text-gray-700">
             From recovering critical business data to fortifying entire IT
             infrastructures, we’ve become a trusted partner in digital
             resilience. Our cybersecurity and data recovery solutions have
